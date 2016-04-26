@@ -3,7 +3,7 @@ import logging
 from unidecode import unidecode
 from unicodedata import normalize, category
 
-from fingerprint.constants import CATEGORIES, COLLAPSE, WS
+from fingerprints.constants import CATEGORIES, COLLAPSE, WS
 
 log = logging.getLogger(__name__)
 

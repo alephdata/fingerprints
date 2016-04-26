@@ -1,4 +1,4 @@
-from fingerprint.constants import PERSON, COMPANY, ADDRESS
-from fingerprint.make import make
+from fingerprints.constants import PERSON, COMPANY, ADDRESS
+from fingerprints.generate import generate
 
-__all__ = [PERSON, COMPANY, ADDRESS, make]
+__all__ = [PERSON, COMPANY, ADDRESS, generate]

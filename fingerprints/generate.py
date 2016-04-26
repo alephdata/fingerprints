@@ -1,9 +1,9 @@
 import logging
 
-from fingerprint.constants import PERSON, COMPANY, ANY
-from fingerprint.constants import BRACKETED, WS
-from fingerprint.data import COMPANY_TYPES, COMPANY_MAPPING, PERSON_PREFIX
-from fingerprint.text import ensure_text, clean_strict
+from fingerprints.constants import PERSON, COMPANY, ANY
+from fingerprints.constants import BRACKETED, WS
+from fingerprints.data import COMPANY_TYPES, COMPANY_MAPPING, PERSON_PREFIX
+from fingerprints.text import ensure_text, clean_strict
 
 log = logging.getLogger(__name__)
 
@@ -13,7 +13,7 @@ def company_type_replacer(match):
     return COMPANY_MAPPING.get(match, match)
 
 
-def make(text, kind=ANY):
+def generate(text, kind=ANY):
     text = ensure_text(text)
     if text is None:
         return

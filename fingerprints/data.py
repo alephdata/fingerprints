@@ -1,9 +1,8 @@
 import os
 import re
-import six
 import yaml
 
-from fingerprint.text import clean_replacement
+from fingerprints.text import clean_replacement
 
 
 data_file = os.path.join(os.path.dirname(__file__), 'data.yaml')

@@ -1,5 +1,5 @@
 # coding: utf-8
-import fingerprint
+import fingerprints
 
 tests = [
     u'Foo (Bar) Corp',
@@ -15,5 +15,5 @@ tests = [
 ]
 
 for test in tests:
-    out = fingerprint.make(test)
+    out = fingerprints.generate(test)
     print out
