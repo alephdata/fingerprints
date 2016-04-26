@@ -9,7 +9,9 @@ tests = [
     u'РАДИК ІВАН ЛЬВОВИЧ',
     u'КУШНАРЬОВ ДМИТРО ВІТАЛІЙОВИЧ',
     u'Foo (Bar) CORPORATION',
+    'Mr. Sherlock Holmes',
     'Siemens Aktiengesellschaft',
+    'New York, New York',
     u'Foo Gesellschaft mit beschränkter Haftung',
     'Software und- Systemgesellschaft mit beschr Haftung'
 ]
