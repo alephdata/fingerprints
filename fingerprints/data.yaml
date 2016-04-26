@@ -1,0 +1,147 @@
+
+person_prefix:
+  - Mr
+  - Mrs
+  - Mister
+  - Miss
+  - Madame
+  - Mme
+  - Mmme
+  - Herr
+  - Frau
+  - Fräulein
+  - Senor
+  - Senorita
+
+# TODO: https://en.wikipedia.org/wiki/Types_of_business_entity
+company_types:
+  SRL:
+    - 'SOCIETATEA CU RASPUNDERE LIMITATA'
+    - 'S.R.L.'
+    - 'S.R.L'
+    - 'SOCIETATE CU RASPUNDERE LIMITATA'
+    - 'SOCIETATEA CU RASDPUNDERE LIMITATA'
+    - 'SICIETATEA DE RASPUNDERE LIMITATA'
+    - 'SOCIETATA CU RASPUNDERE LIMITATA'
+    - 'SOCIETATEA CU RASPUNDERE'
+    - 'SOCIETATEA CU RĂSPUNDERE'
+    - 'SOCIETATEA CU RESPONSABILITATE LIMITATA'
+    - 'SOCIETATE CU RASPONBILITATE LIMITATA'
+    - 'SOCIETATEA CU RESPONSABILITATEA LIMITATA'
+    - 'SOCIETATEA CU RESPONSABILITATEA LIMITATA'
+    - 'SOCIETATE CU RESPONSABILITATE LIMIIATA'
+    - 'SOCIETATEA CU RESPONSABILITATE LIMITATA'
+    - 'Societatea cu Răspundere Limitată'
+    - 'SOCITATE CU RESPONSABILITATE LIMITATA'
+    - 'SOCIETATEA CU RESPUNDERE LIMITATA'
+    - 'Societate cu Răspundere Limitată'
+    - 'SOCIETATEA CU RASPONSABILITATE LIMITATA'
+    - 'SOCIETATE CU RESPONSABILITATE LIMITATA'
+    - 'SOCIETATEA CU RESPONSABILITATE LIMITATA'
+    - 'SOCIETATII CU RASPUNDEREA LIMITATA'
+    - 'SOCIETATEA CU RASPUNDERE LIMITATE'
+    - 'Societate cu Răspundre Limitată'
+    - 'Societete cu Răspundere Limitată'
+    - 'INTREPRINDEREA CU RESPONSABILITATE LIMITATA'
+  SA:
+    - 'SOCIETATEARE PE ACTIUNI'
+    - 'Societatea pe Acţiuni'
+    - 'SOCIETATEA PE ACTIUNI'
+  II:
+    - 'INTREPRINDEREA INDIVIDUALA'
+    - 'INTREPRINDERE INDIVIDUALA'
+    - 'INTREPRINDEREA INDIVIUALA'
+    - 'ÎNTERPRINDEREA INDIVIDUALĂ'
+    - 'INTREPRINDEREA IBDIVIDUALA'
+    - 'ÎNTREPRINDEREA INDIVIDUALĂ'
+    - 'Întreprindere Individuală'
+    - 'Întreprinderea individuală'
+    - 'întreprinzător Individual'
+    - 'INTREPRINDEREA INDIVIDUALĂ'
+    - 'Întreprinzătorul individual'
+    - 'Întreprinzător individual'
+    - 'INTEPRINDEREA INDIVIDUALA'
+    - 'Întreprindere Individuală'
+    - 'Întreprinzător Individual'
+    - 'Întreprinderea Individualî'
+    - 'Întreprinzătorul Individual'
+    - 'Întreprinderea Individuală'
+    - 'Întreprindere Individuală'
+    - 'Întreprindserea Individuală'
+    - 'Intreprinzator Individual'
+    - 'Întreprinderea Individualî'
+    - 'întreprinderea Individuală'
+    - 'îNTREPRINDEREA INDIVIDUALă'
+    - 'INTREPRINDERE INDIVIDUALĂ'
+    - 'ÎNTREPRINDERE INDIVIDUALĂ'
+    - 'Întreprindera Individuală'
+    - 'Întreprindere individuală'
+    - 'îNTREPRINDEREA INDIVIDUALĂ'
+    - 'INTERPRINDEREA INDIVIDUALă'
+    - 'Întreprindere individuală'
+  IS:
+    - 'Întreprinderea de Stat'
+    - 'INTREPRINDEREA DE STAT'
+    - 'INTREPRINDERE DE STAT ALIMENTATIEI PUBLICE'
+  IM:
+    - 'Întreprinderea Municipală'
+    - 'ÎNTREPRINDEREA MUNICIPALĂ'
+  SC:
+    - 'Societatea Comercială'
+    - 'SOCIETATEA COMERCIALĂ'
+    - 'COMPANIA COMERCIALA SI DE PRODUCTIE SOCIETATEA CU RESPONSABILITATE LIMITATA'
+  Ltd:
+    - 'Limited by shares'
+    - 'Limited by guarantee'
+    - 'Limited'
+    - 'Ltd.'
+  Plc:
+    - 'Public Limited Company'
+  Corp:
+    - 'Corporation'
+  Inc:
+    - 'Incorporated'
+  GmbH:
+    - 'Gesellschaft mit beschränkter Haftung'
+    - 'Gesellschaft mit besch. Haftung'
+    - 'Gesellschaft mit besch Haftung'
+    - 'Gesellschaft mit beschr. Haftung'
+    - 'Gesellschaft mit beschr Haftung'
+    - 'G.m.b.H'
+  mbH:
+    - 'mit beschränkter Haftung'
+    - 'mit beschr Haftung'
+    - 'mit besch Haftung'
+  Pty Ltd:
+    - 'Proprietary Limited'
+  AG:
+    - 'Aktiengesellschaft'
+  SA:
+    - 'Sociedad Anónima'
+    - 'Sociedad Anonima'
+    - 'Sociedad por Acciones'
+    - 'Societat Anònima'
+    - 'Sociedade Anónima'
+    - 'Sociedade Anônima'
+    - 'Sociedá Anónima'
+    - 'Società Anonima'
+    - 'Société anonyme'
+    - 'Spółka Akcyjna'
+    - 'Societate pe Acțiuni'
+  AS:
+    - 'Anonim Şirket'
+    - 'Akciju Sabiedrība'
+    - 'Aktieselskab'
+    - 'Akciová spoločnosť'
+    - 'Akciová společnost'
+  eV:
+    - 'eingetragener Verein'
+  aisbl:
+    - 'Internationale vereniging zonder winstoogmerk'
+    - 'Association internationale sans but lucratif'
+    - 'ivzw'
+  asbl:
+    - 'Association sans but lucratif'
+    - 'Vereniging zonder winstoogmerk'
+    - 'Vereinigung ohne Gewinnerzielungsabsicht'
+    - 'vzw'
