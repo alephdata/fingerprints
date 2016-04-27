@@ -1,2 +1,2 @@
 include README.md
-include fingerprint/data.yaml
+include fingerprints/data.yaml
