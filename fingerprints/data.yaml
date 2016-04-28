@@ -95,8 +95,34 @@ company_types:
     - 'Limited by guarantee'
     - 'Limited'
     - 'Ltd.'
+    # azerbaijan
+    - 'Qapalı səhmdar cəmiyyəti'
+    # russia
+    - 'Закрытое акционерное общество'
+    - 'ZAO'
+    - 'JSC'
+    # ukraine
+    - 'Товариство з обмеженою відповідальністю'
+    - 'TOB'
+    - 'Акціонерне товариство'
+  LLC:
+    - 'Limited Liability Company'
+    - 'Məhdud məsuliyyətli cəmiyyət'
+    - 'Общество с ограниченной ответственностью'
+    - 'OOO'
   Plc:
     - 'Public Limited Company'
+    - 'Open Joint Stock Company'
+    # azerbaijan
+    - 'Açıq səhmdar cəmiyyəti'
+    # russia
+    - 'Открытое акционерное общество'
+    - 'Открытое акционерное общество'
+    - 'OAO'
+    - 'OJSC'
+    # ukraine
+    - 'Державне акціонерне товариство'
+    - 'ДАТ'
   Corp:
     - 'Corporation'
   Inc:
@@ -145,3 +171,8 @@ company_types:
     - 'Vereniging zonder winstoogmerk'
     - 'Vereinigung ohne Gewinnerzielungsabsicht'
     - 'vzw'
+  GP:
+    - 'Государственное унитарное предприятие'
+    - 'ГП'
+    - 'ГУП'
+    - 'Dövlət idarə etmə organı'
