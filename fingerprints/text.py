@@ -27,7 +27,7 @@ def ensure_text(text):
             return None
 
     text = text.strip()
-    if not len(text):
+    if len(text) < 2:
         return None
     return text
 
