@@ -4,14 +4,25 @@ person_prefix:
   - Mrs
   - Mister
   - Miss
+  - Madam
   - Madame
+  - Monsieur
   - Mme
   - Mmme
   - Herr
+  - Hr
   - Frau
+  - Fr
+  - The
+  # - A
+  # - El
+  # - Le
   - Fräulein
   - Senor
   - Senorita
+  - Sr
+  - Sir
+  - Lady
 
 # TODO: https://en.wikipedia.org/wiki/Types_of_business_entity
 company_types:
@@ -43,10 +54,6 @@ company_types:
     - 'Societate cu Răspundre Limitată'
     - 'Societete cu Răspundere Limitată'
     - 'INTREPRINDEREA CU RESPONSABILITATE LIMITATA'
-  SA:
-    - 'SOCIETATEARE PE ACTIUNI'
-    - 'Societatea pe Acţiuni'
-    - 'SOCIETATEA PE ACTIUNI'
   II:
     - 'INTREPRINDEREA INDIVIDUALA'
     - 'INTREPRINDERE INDIVIDUALA'
@@ -91,58 +98,64 @@ company_types:
     - 'SOCIETATEA COMERCIALĂ'
     - 'COMPANIA COMERCIALA SI DE PRODUCTIE SOCIETATEA CU RESPONSABILITATE LIMITATA'
   Ltd:
+    - 'Ltd. Co.'
     - 'Limited by shares'
     - 'Limited by guarantee'
     - 'Limited'
     - 'Ltd.'
+    # portuguese
+    - Ltda
+    - Limitada
+    - Lda.
     # azerbaijan
     - 'Qapalı səhmdar cəmiyyəti'
+    # iceland
+    - 'einkahlutafélag'
+    # israel
+    - 'בע"מ'
+    # latvia
+    - 'Sabiedrība ar ierobežotu atbildību'
+    - 'Uždaroji akcinė bendrovė'
+  ZAO:
     # russia
     - 'Закрытое акционерное общество'
     - 'ZAO'
     - 'JSC'
+  TOB:
     # ukraine
     - 'Товариство з обмеженою відповідальністю'
+    - 'Таварыства з абмежаванай адказнасцю'
+    - 'Tavaristva z Abmezhavanaj Adkaznastsiu'
     - 'TOB'
     - 'Акціонерне товариство'
-  LLC:
-    - 'Limited Liability Company'
-    - 'Məhdud məsuliyyətli cəmiyyət'
-    - 'Общество с ограниченной ответственностью'
-    - 'OOO'
-  Plc:
-    - 'Public Limited Company'
-    - 'Open Joint Stock Company'
-    # azerbaijan
-    - 'Açıq səhmdar cəmiyyəti'
-    # russia
-    - 'Открытое акционерное общество'
-    - 'Открытое акционерное общество'
-    - 'OAO'
-    - 'OJSC'
-    # ukraine
-    - 'Державне акціонерне товариство'
-    - 'ДАТ'
-  Corp:
-    - 'Corporation'
+  BVBA:
+    # belgium
+    - 'besloten vennootschap met beperkte aansprakelijkheid'
+  SPRL:
+    - 'société privée à responsabilité limitée'
+  doo:
+    # bosnia
+    - 'd.o.o.'
+    - 'društvo s ograničenom odgovornošću'
+  dro:
+    # bulgaria
+    - 'drujestvo s ogranichena otgovornost'
+    - 'дружество с ограничена отговорност'
+    - 'ООД'
+  sro:
+    # czech rep
+    - 's.r.o'
+    - 'Společnost s ručením omezeným'
+  SARL:
+    # luxembourg
+    - 'S.A.R.L.'
+    - 'Société à responsabilité limitée'
   Inc:
     - 'Incorporated'
-  GmbH:
-    - 'Gesellschaft mit beschränkter Haftung'
-    - 'Gesellschaft mit besch. Haftung'
-    - 'Gesellschaft mit besch Haftung'
-    - 'Gesellschaft mit beschr. Haftung'
-    - 'Gesellschaft mit beschr Haftung'
-    - 'G.m.b.H'
-  mbH:
-    - 'mit beschränkter Haftung'
-    - 'mit beschr Haftung'
-    - 'mit besch Haftung'
-  Pty Ltd:
-    - 'Proprietary Limited'
-  AG:
-    - 'Aktiengesellschaft'
   SA:
+    - 'SOCIETATEARE PE ACTIUNI'
+    - 'Societatea pe Acţiuni'
+    - 'SOCIETATEA PE ACTIUNI'
     - 'Sociedad Anónima'
     - 'Sociedad Anonima'
     - 'Sociedad por Acciones'
@@ -160,19 +173,82 @@ company_types:
     - 'Aktieselskab'
     - 'Akciová spoločnosť'
     - 'Akciová společnost'
+  LLC:
+    - 'Limited Liability Company'
+    - 'Məhdud məsuliyyətli cəmiyyət'
+    - 'Общество с ограниченной ответственностью'
+    - 'OOO'
+    - 'ТОВ'
+  Plc:
+    - 'Public Limited Company'
+    - 'Open Joint Stock Company'
+    # azerbaijan
+    - 'Açıq səhmdar cəmiyyəti'
+    # russia
+    - 'Открытое акционерное общество'
+    - 'Открытое акционерное общество'
+    - 'OAO'
+    - 'OJSC'
+    - 'ПАО'
+    # ukraine
+    - 'Державне акціонерне товариство'
+    - 'ДАТ'
+    - Адкрытае акцыянернае таварыства
+    - Adkritaye Aktsiyanernaye Tavaristva
+    - Закрытае ацыянернае таварыства
+    - Zakritaye Aktsiyanernaye Tavaristva
+    # croatia
+    - 'dioničko društvo'
+    # czech rep 
+    - 'Akciová společnost'
+    # iceland
+    - 'hlutafélag'
+    # latvia
+    - 'Akciju sabiedrība'
+    - 'Akcinė bendrovė'
+    # poland
+    - 'spółka akcyjna'
+  AE:
+    # greece
+    - 'Ανώνυμη Εταιρεία'
+    - 'Anónimi Etería'
+  Corp:
+    - 'Corporation'
+  Coop:
+    - 'Genossenschaft'
+    - 'Cooperative'
+    - 'Spółdzielnia'
+  GmbH:
+    - 'Gesellschaft mit beschränkter Haftung'
+    - 'Gesellschaft mit besch. Haftung'
+    - 'Gesellschaft mit besch Haftung'
+    - 'Gesellschaft mit beschr. Haftung'
+    - 'Gesellschaft mit beschr Haftung'
+    - 'G.m.b.H'
+    - 'mit beschränkter Haftung'
+    - 'mit beschr Haftung'
+    - 'mit besch Haftung'
+  Pty Ltd:
+    - 'Proprietary Limited'
+  AG:
+    - 'Aktiengesellschaft'
+  # Foundation:
+  #  - 'Общественный фонд'
+  # NGO:
+  #  - 'Общественное объединение'
   eV:
     - 'eingetragener Verein'
-  aisbl:
-    - 'Internationale vereniging zonder winstoogmerk'
-    - 'Association internationale sans but lucratif'
-    - 'ivzw'
   asbl:
     - 'Association sans but lucratif'
     - 'Vereniging zonder winstoogmerk'
     - 'Vereinigung ohne Gewinnerzielungsabsicht'
     - 'vzw'
+    - 'Internationale vereniging zonder winstoogmerk'
+    - 'Association internationale sans but lucratif'
+    - 'ivzw'
   GP:
     - 'Государственное унитарное предприятие'
     - 'ГП'
     - 'ГУП'
     - 'Dövlət idarə etmə organı'
+  #  - 'e.U.'

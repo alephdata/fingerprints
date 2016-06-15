@@ -3,7 +3,7 @@ import logging
 from fingerprints.constants import PERSON, COMPANY, ANY
 from fingerprints.constants import BRACKETED, WS
 from fingerprints.data import COMPANY_TYPES, COMPANY_MAPPING, PERSON_PREFIX
-from fingerprints.text import ensure_text, clean_strict
+from fingerprints.text import ensure_text, clean_strict, collapse
 
 log = logging.getLogger(__name__)
 
@@ -13,7 +13,7 @@ def company_type_replacer(match):
     return COMPANY_MAPPING.get(match, match)
 
 
-def generate(text, kind=ANY):
+def generate(text, kind=ANY, keep_order=False):
     text = ensure_text(text)
     if text is None:
         return
@@ -34,9 +34,12 @@ def generate(text, kind=ANY):
     if kind in [ANY, COMPANY]:
         text = COMPANY_TYPES.sub(company_type_replacer, text)
 
-    # final manicure, based on openrefine algo
-    parts = [p for p in text.split(WS) if len(p)]
-    text = WS.join(sorted(set(parts)))
+    if keep_order:
+        text = collapse(text)
+    else:
+        # final manicure, based on openrefine algo
+        parts = [p for p in text.split(WS) if len(p)]
+        text = WS.join(sorted(set(parts)))
 
     if not len(text):
         return None

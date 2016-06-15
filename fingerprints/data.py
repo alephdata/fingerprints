@@ -12,7 +12,7 @@ with open(data_file, 'r') as fh:
 # Compile person prefixes into a regular expression.
 person_prefixes = [p.lower().strip() for p in data.get('person_prefix')]
 person_prefixes = '|'.join(person_prefixes)
-person_prefixes = '^(%s)' % person_prefixes
+person_prefixes = '^(%s\b)' % person_prefixes
 PERSON_PREFIX = re.compile(person_prefixes, re.U)
 
 
@@ -27,5 +27,6 @@ for clean_form, other_forms in data.get('company_types').items():
             COMPANY_MAPPING[form] = clean_form
             company_types.append(form)
 
+company_types = sorted(company_types, key=lambda ct: -1 * len(ct))
 company_types = '(%s)' % '|'.join(company_types)
 COMPANY_TYPES = re.compile(company_types, re.U)

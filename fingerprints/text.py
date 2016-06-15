@@ -1,8 +1,8 @@
 import six
 import logging
-from unidecode import unidecode
 from unicodedata import normalize, category
 
+from fingerprints.latinize import latinize
 from fingerprints.constants import CATEGORIES, COLLAPSE, WS
 
 log = logging.getLogger(__name__)
@@ -35,7 +35,7 @@ def ensure_text(text):
 def category_replace(text):
     """Replace unicode categories in the given text."""
     word = []
-    for character in normalize('NFD', text):
+    for character in normalize('NFKD', text):
         cat = category(character)[0]
         character = CATEGORIES.get(cat, character)
         if character is None:
@@ -46,13 +46,13 @@ def category_replace(text):
 
 def collapse(text):
     """Remove duplicate whitespaces."""
-    return COLLAPSE.sub(WS, text)
+    return COLLAPSE.sub(WS, text).strip(WS)
 
 
 def clean_strict(text):
     """Super-hardcore string scrubbing."""
     # transliterate to latin
-    text = unidecode(text)
+    text = latinize(text)
     # replace punctuation and symbols
     text = category_replace(six.text_type(text))
     # pad out for company type replacements
