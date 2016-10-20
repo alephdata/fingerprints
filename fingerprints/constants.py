@@ -10,8 +10,8 @@ CATEGORIES = {
     'C': None,
     'M': None,
     'Z': WS,
-    'P': '',
-    # 'S': WS
+    'P': None,
+    'S': None
 }
 
 # Some hints for the normalizer:
