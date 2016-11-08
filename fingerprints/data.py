@@ -11,8 +11,8 @@ with open(data_file, 'r') as fh:
 
 # Compile person prefixes into a regular expression.
 person_prefixes = [p.lower().strip() for p in data.get('person_prefix')]
-person_prefixes = '|'.join(person_prefixes)
-person_prefixes = '^(%s\b)' % person_prefixes
+person_prefixes = '\\.?\\b|'.join(person_prefixes)
+person_prefixes = '^(%s\\.?\\b)' % person_prefixes
 PERSON_PREFIX = re.compile(person_prefixes, re.U)
 
 
