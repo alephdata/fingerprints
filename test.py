@@ -16,13 +16,16 @@ tests = [
     'Software und- Systemgesellschaft mit beschr Haftung',
     'Madame Tussauds',
     u'Порошенко Петро Олексійович',
-    u'بترو بوروشنكو'
+    u'بترو بوروشنكو',
+    'S.R.L. "Magic-Arrow" ICS',
+    "Johnson's Coffee Shop",
+    'Hacks/Hackers'
 ]
 
 for test in tests:
     out = fingerprints.generate(test)
     print out
 
-for test in tests:
-    out = fingerprints.generate(test, keep_order=True)
-    print out
+# for test in tests:
+#     out = fingerprints.generate(test, keep_order=True)
+#     print out

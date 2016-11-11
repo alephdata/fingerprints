@@ -3,7 +3,8 @@ import logging
 from unicodedata import normalize, category
 
 from fingerprints.latinize import latinize
-from fingerprints.constants import CATEGORIES, COLLAPSE, WS
+from fingerprints.constants import UNICODE_CATEGORIES, CHARACTERS_REMOVE
+from fingerprints.constants import COLLAPSE, WS
 
 log = logging.getLogger(__name__)
 
@@ -36,8 +37,10 @@ def category_replace(text):
     """Replace unicode categories in the given text."""
     word = []
     for character in normalize('NFKD', text):
-        cat = category(character)[0]
-        character = CATEGORIES.get(cat, character)
+        if character in CHARACTERS_REMOVE:
+            continue
+        cat = category(character)
+        character = UNICODE_CATEGORIES.get(cat, character)
         if character is None:
             continue
         word.append(character)
