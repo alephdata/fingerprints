@@ -30,7 +30,7 @@ setup(
     zip_safe=False,
     test_suite='nose.collector',
     install_requires=[
-        'normality',
+        'normality>=0.3.3',
         'unidecode',
         'pyyaml',
         'six'
