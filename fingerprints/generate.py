@@ -1,9 +1,9 @@
 import logging
+from normality import collapse_spaces
 
-from fingerprints.constants import PERSON, COMPANY, ANY
 from fingerprints.constants import BRACKETED, WS
 from fingerprints.data import COMPANY_TYPES, COMPANY_MAPPING, PERSON_PREFIX
-from fingerprints.text import ensure_text, clean_strict, collapse
+from fingerprints.text import ensure_text, clean_strict
 
 log = logging.getLogger(__name__)
 
@@ -13,7 +13,7 @@ def company_type_replacer(match):
     return COMPANY_MAPPING.get(match, match)
 
 
-def generate(text, kind=ANY, keep_order=False):
+def generate(text, keep_order=False):
     text = ensure_text(text)
     if text is None:
         return
@@ -22,20 +22,17 @@ def generate(text, kind=ANY, keep_order=False):
     text = text.lower()
 
     # try to remove personal prefix, such as Mr., Mrs.
-    if kind in [ANY, PERSON]:
-        text = PERSON_PREFIX.sub(WS, text)
+    text = PERSON_PREFIX.sub(WS, text)
 
     # remove any text in brackets
     text = BRACKETED.sub(WS, text)
 
     # super hard-core string scrubbing
     text = clean_strict(text)
-
-    if kind in [ANY, COMPANY]:
-        text = COMPANY_TYPES.sub(company_type_replacer, text)
+    text = COMPANY_TYPES.sub(company_type_replacer, text)
 
     if keep_order:
-        text = collapse(text)
+        text = collapse_spaces(text)
     else:
         # final manicure, based on openrefine algo
         parts = [p for p in text.split(WS) if len(p)]

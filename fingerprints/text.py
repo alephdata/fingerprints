@@ -1,12 +1,12 @@
+import re
 import six
 import logging
-from unicodedata import normalize, category
+from normality import collapse_spaces, latinize_text, category_replace
 
-from fingerprints.latinize import latinize
-from fingerprints.constants import UNICODE_CATEGORIES, CHARACTERS_REMOVE
-from fingerprints.constants import COLLAPSE, WS
+from fingerprints.constants import WS
 
 log = logging.getLogger(__name__)
+CHARACTERS_REMOVE_RE = re.compile(r'[\.\']')
 
 
 def ensure_text(text):
@@ -33,33 +33,16 @@ def ensure_text(text):
     return text
 
 
-def category_replace(text):
-    """Replace unicode categories in the given text."""
-    word = []
-    for character in normalize('NFKD', text):
-        if character in CHARACTERS_REMOVE:
-            continue
-        cat = category(character)
-        character = UNICODE_CATEGORIES.get(cat, character)
-        if character is None:
-            continue
-        word.append(character)
-    return ''.join(word)
-
-
-def collapse(text):
-    """Remove duplicate whitespaces."""
-    return COLLAPSE.sub(WS, text).strip(WS)
-
-
 def clean_strict(text):
     """Super-hardcore string scrubbing."""
+
     # transliterate to latin
-    text = latinize(text)
+    text = latinize_text(text)
     # replace punctuation and symbols
-    text = category_replace(six.text_type(text))
+    text = CHARACTERS_REMOVE_RE.sub('', text)
+    text = category_replace(text)
     # pad out for company type replacements
-    text = ''.join((WS, collapse(text), WS))
+    text = ''.join((WS, collapse_spaces(text), WS))
     return text
 
 
