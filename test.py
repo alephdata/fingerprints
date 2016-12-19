@@ -7,6 +7,7 @@ tests = [
     'Open S.A.R.L.',
     'Mr. Boaty McBoatface',
     u'РАДИК ІВАН ЛЬВОВИЧ',
+    u'FUAD ALIYEV ƏHMƏD OĞLU',
     u'КУШНАРЬОВ ДМИТРО ВІТАЛІЙОВИЧ',
     u'Foo (Bar) CORPORATION',
     'Mr. Sherlock Holmes',
@@ -19,12 +20,13 @@ tests = [
     u'بترو بوروشنكو',
     'S.R.L. "Magic-Arrow" ICS',
     "Johnson's Coffee Shop",
-    'Hacks/Hackers'
+    'Hacks/Hackers',
+    'ХАЯСИ ПЛАЙВУД ИНДАСТРИАЛ КО ЛТД'
 ]
 
 for test in tests:
     out = fingerprints.generate(test)
-    print out
+    print test, out
 
 # for test in tests:
 #     out = fingerprints.generate(test, keep_order=True)

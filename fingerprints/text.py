@@ -1,7 +1,7 @@
 import re
 import six
 import logging
-from normality import collapse_spaces, latinize_text, category_replace
+from normality import collapse_spaces, ascii_text, category_replace
 
 from fingerprints.constants import WS
 
@@ -35,9 +35,8 @@ def ensure_text(text):
 
 def clean_strict(text):
     """Super-hardcore string scrubbing."""
-
-    # transliterate to latin
-    text = latinize_text(text)
+    # transliterate to ascii
+    text = ascii_text(text)
     # replace punctuation and symbols
     text = CHARACTERS_REMOVE_RE.sub('', text)
     text = category_replace(text)
