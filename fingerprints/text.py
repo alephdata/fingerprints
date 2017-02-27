@@ -9,30 +9,6 @@ log = logging.getLogger(__name__)
 CHARACTERS_REMOVE_RE = re.compile(r'[\.\']')
 
 
-def ensure_text(text):
-    """Make sure ``text`` is a useful snippet of text."""
-    if text is None:
-        return
-
-    if not isinstance(text, six.text_type):
-        try:
-            text = six.text_type(text)
-        except Exception as ex:
-            log.exception(ex)
-
-    if not isinstance(text, six.text_type):
-        try:
-            text = text.decode('utf-8')
-        except Exception as ex:
-            log.exception(ex)
-            return None
-
-    text = text.strip()
-    if len(text) < 2:
-        return None
-    return text
-
-
 def clean_strict(text):
     """Super-hardcore string scrubbing."""
     # transliterate to ascii

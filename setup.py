@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='fingerprints',
-    version='0.3.3',
+    version='0.4.0',
     description="A library to generate entity fingerprints.",
     long_description="",
     classifiers=[
@@ -30,7 +30,7 @@ setup(
     zip_safe=False,
     test_suite='nose.collector',
     install_requires=[
-        'normality>=0.3.8',
+        'normality>=0.4.0',
         'unidecode',
         'pyyaml',
         'six'
