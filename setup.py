@@ -19,7 +19,7 @@ setup(
     keywords='names people companies normalisation',
     author='Friedrich Lindenberg',
     author_email='friedrich@pudo.org',
-    url='http://github.com/pudo/fingerprint',
+    url='http://github.com/pudo/fingerprints',
     license='MIT',
     packages=find_packages(exclude=['ez_setup', 'examples', 'test']),
     namespace_packages=[],
