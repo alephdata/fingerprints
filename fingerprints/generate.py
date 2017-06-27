@@ -2,25 +2,11 @@ import logging
 from normality import collapse_spaces, stringify
 
 from fingerprints.constants import BRACKETED, WS
-from fingerprints.data import COMPANY_TYPES, COMPANY_MAPPING, PERSON_PREFIX
+from fingerprints.replacers import replace_types
 from fingerprints.text import clean_strict
+from fingerprints.prefix import remove_person_prefix
 
 log = logging.getLogger(__name__)
-
-
-def company_type_replacer(match):
-    match = match.group(1)
-    return COMPANY_MAPPING.get(match, match)
-
-
-def normalise_company_type(text):
-    """Chomp down company types to a more convention form."""
-    return COMPANY_TYPES.sub(company_type_replacer, text)
-
-
-def remove_person_prefix(text):
-    """Remove personal prefix, such as Mr., Mrs., etc."""
-    return PERSON_PREFIX.sub(WS, text)
 
 
 def generate(text, keep_order=False):
@@ -37,7 +23,7 @@ def generate(text, keep_order=False):
 
     # super hard-core string scrubbing
     text = clean_strict(text)
-    text = normalise_company_type(text)
+    text = replace_types(text)
 
     if keep_order:
         text = collapse_spaces(text)

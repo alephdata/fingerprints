@@ -1,0 +1,475 @@
+types:
+  AISBL: ASBL
+  Adkritaye Aktsiyanernaye Tavaristva: AAT
+  Akciju Sabiedrība: AS
+  Akciju sabiedrība: AS
+  Akciová společnost: AS
+  Akciová spoločnosť: AS
+  Aksiyadorlik jamiyati: AG
+  Aktiebolag: AB
+  Aktiengesellschaft: AG
+  Aktieselskab: AS
+  Aktsiaselts: AS
+  Andelsselskab med begrænset ansvar: AMBA
+  Anonim Ortaklık: AO
+  Anonim Şirket: AS
+  Anpartsselskab: ApS
+  Anónimi Etería: AE
+  Association internationale sans but lucratif: ASBL
+  Association sans but lucratif: ASBL
+  Açıq səhmdar cəmiyyəti: ASC
+  Berhad: Bhd
+  CJSC: ZAO
+  CO.LTD: CO LTD
+  COMPANIA COMERCIALA SI DE PRODUCTIE SOCIETATEA CU RESPONSABILITATE LIMITATA: SC
+  Closed Joint Stock Company: ZAO
+  Comandita Simple: S. en C.
+  Comandita por Acciones: SCA
+  Comm. V: CV
+  Comm. VA: CVA
+  Company: Co.
+  Compañía: Cía
+  Compañía Anónima: CA
+  Compañía Limitada: Cia Ltda
+  Cooperative: COOP
+  Corporation: Corp
+  Công ty cổ phần: Cty CP
+  Công ty trách nhiệm hữu hạn: Cty TNHH
+  Công ty trách nhiệm hữu hạn một thành viên: Cty TNHH MTV
+  DIS.TIC.LTD: DIS TIC LTD
+  Doanh nghiệp có vốn đầu tư nước ngoài: DTNN
+  Doanh nghiệp nhà nước: DNNN
+  Doanh nghiệp tư nhân: DNTN
+  EXP.CORP: EXP CORP
+  EXPORT: EXP
+  Ekonomisk förening: Ek. för.
+  Empresa Individual de Responsabilidad Limitada: EIRL
+  Empresa Individual de Responsabilidade Limitada: EIRELI
+  Empresa Pública: EP
+  Empresa Unipersonal: EU
+  Enterprise: Ent.
+  Entreprise individuelle: EI
+  Entreprise unipersonnelle à responsabilité limitée: EURL
+  European Economic Interest Grouping: EEIG
+  Firma: Fa
+  Fond commun de placement: CP
+  Forening med begrænset ansvar: FMBA
+  Füüsilisest isikust ettevõtja: FIE
+  G.m.b.H: GmbH
+  General Partnership: GP
+  Genossenschaft: eG
+  Gensidigt selskab: GS
+  Gesellschaft des bürgerlichen Rechts: GesbR
+  Gesellschaft mit besch Haftung: GmbH
+  Gesellschaft mit besch. Haftung: GmbH
+  Gesellschaft mit beschr Haftung: GmbH
+  Gesellschaft mit beschr. Haftung: GmbH
+  Gesellschaft mit beschränkter Haftung: GmbH
+  GmbH & Co. KG: GmbH
+  GmbH und Co. KG: GmbH
+  Groupement d'intérêt économique: GIE
+  Halka Açık Anonim Ortaklık: HAAO
+  Hindu Undivided Family: HUF
+  Hợp tác xã: HTX
+  IMP.AND: IMP AND
+  IMPORT: IMP
+  INS.OTO.SAN.TIC: INS OTO SAN TIC
+  INSAAT: INS
+  INTEPRINDEREA INDIVIDUALA: II
+  INTERPRINDEREA INDIVIDUALă: II
+  INTREPRINDERE DE STAT ALIMENTATIEI PUBLICE: IS
+  INTREPRINDERE INDIVIDUALA: II
+  INTREPRINDERE INDIVIDUALĂ: II
+  INTREPRINDEREA CU RESPONSABILITATE LIMITATA: SRL
+  INTREPRINDEREA DE STAT: IS
+  INTREPRINDEREA IBDIVIDUALA: II
+  INTREPRINDEREA INDIVIDUALA: II
+  INTREPRINDEREA INDIVIDUALĂ: II
+  INTREPRINDEREA INDIVIUALA: II
+  Incorp: Inc
+  Incorporated: Inc
+  Incorporée: Inc
+  Individuālais komersants: IK
+  Interessentskab: IS
+  International: Intl
+  Internationale: Intl
+  Internationale vereniging zonder winstoogmerk: VZW
+  Intreprinzator Individual: II
+  Iværksætterselskab: IVS
+  JSC: AO
+  Joint Stock Company: AO
+  Joint Venture: JV
+  Kolektif şirket: Koll. Şti.
+  Komandit şirket: Kom. Şti
+  Komandītsabiedrība: KS
+  Kommanditerwerbsgesellschaft: KEG
+  Kommanditgesellschaft: KG
+  Kommanditselskab: KS
+  Kooperatif Şirket: KOOP
+  LOJISTIK: LOJ
+  LTD.STI: LTD STI
+  Lda.: LTD
+  Limitada: LTD
+  Limited: LTD
+  Limited Company: LTD
+  Limited Liability Company: LLC
+  Limited Liability Partnership: LLP
+  Limited Ortaklık: LO
+  Limited Partnership: LP
+  Limited by guarantee: LTD
+  Limited by shares: LTD
+  Limited şirket: LTD STI
+  Limitée: LTD
+  Ltd.: LTD
+  Ltd. Co.: LTD
+  Ltda: LTD
+  Mas'uliyati Cheklangan Jamiyat: MChJ
+  Mittetulundusühing: MTÜ
+  Məhdud məsuliyyətli cəmiyyət: MMC
+  Nin'i Kumiai: NK
+  No liability: NL
+  OAO: OAO
+  OJSC: OAO
+  Občanské sdružení.: OS
+  Ochiq aksiyadorlik jamiyati: OAJ
+  Offene Erwerbsgesellschaft: OEG
+  Oilaviy korxona: OK
+  Open Joint Stock Company: OAO
+  Organização da sociedade civil de interesse público: OSCIP
+  Organização não governamental: ONG
+  Osaühing: OÜ
+  OсOO: OOO
+  PAO: RAO
+  PJSC: RAO
+  PLT: PLT
+  Partnerselskab: PS
+  Perseroan Terbatas: PT
+  Perseroan Terbatas Terbuka: PT Tbk
+  Pilnsabiedrība: PS
+  Private Limited Company: LTD
+  Proprietary Limited: Pty
+  Proprietary Limited Company: Pty
+  Pte Ltd.: LTD
+  Pty Ltd: Pty
+  Public Establishment with Economic characteristics: PEEC
+  Public Limited Company: PLC
+  Public Sector Enterprise: PSE
+  Public Sector Undertaking: PSU
+  Publikt aktiebolag: AB
+  Qapalı səhmdar cəmiyyəti: QSC
+  Qo'shimcha ma'suliyatli jamiyat: QMJ
+  Qo'shma korxona: QK
+  S.R.L: SRL
+  S.R.L.: SRL
+  SAN.A.S: SAN AS
+  SAN.TIC: SAN TIC
+  SAN.TIC.LTD.: SAN TIC LTD
+  SAN.TIC.LTD.STI: SAN TIC LTD STI
+  SAN.VE: SAN VE
+  SANAYI: SAN
+  SARF: SA
+  SECS: SCS
+  SICIETATEA DE RASPUNDERE LIMITATA: SRL
+  SIRKETI: STI
+  SOCIETATA CU RASPUNDERE LIMITATA: SRL
+  SOCIETATE CU RASPONBILITATE LIMITATA: SRL
+  SOCIETATE CU RASPUNDERE LIMITATA: SRL
+  SOCIETATE CU RESPONSABILITATE LIMIIATA: SRL
+  SOCIETATE CU RESPONSABILITATE LIMITATA: SRL
+  SOCIETATEA COMERCIALĂ: SC
+  SOCIETATEA CU RASDPUNDERE LIMITATA: SRL
+  SOCIETATEA CU RASPONSABILITATE LIMITATA: SRL
+  SOCIETATEA CU RASPUNDERE: SRL
+  SOCIETATEA CU RASPUNDERE LIMITATA: SRL
+  SOCIETATEA CU RASPUNDERE LIMITATE: SRL
+  SOCIETATEA CU RESPONSABILITATE LIMITATA: SRL
+  SOCIETATEA CU RESPONSABILITATEA LIMITATA: SRL
+  SOCIETATEA CU RESPUNDERE LIMITATA: SRL
+  SOCIETATEA CU RĂSPUNDERE: SRL
+  SOCIETATEA PE ACTIUNI: SA
+  SOCIETATEARE PE ACTIUNI: SA
+  SOCIETATII CU RASPUNDEREA LIMITATA: SRL
+  SOCITATE CU RESPONSABILITATE LIMITATA: SRL
+  Sabiedrība ar ierobežotu atbildību: SIA
+  Selskab med begrænset ansvar: SMBA
+  Sendirian Berhad: Sdn Bhd
+  Sharikat al-Mossahamah: SAE
+  Shoqëri Aksionere: Sh.A
+  Shoqëri me përgjegjësi të kufizuar: Sh.p.k
+  Single Member Private Limited Company: SM Pte Ltd.
+  Sociedad Anonima: SA
+  Sociedad Anónima: SA
+  Sociedad Anónima Deportiva: SAD
+  Sociedad Civil Privada: SCPA
+  Sociedad Colectiva: SC
+  Sociedad Comanditaria: S.Cra.
+  Sociedad Cooperativa: Coop
+  Sociedad Limitada Laboral: SLL
+  Sociedad Limitada Nueva Empresa: S.L.N.E.
+  Sociedad de Capital e Industria: SCeI
+  Sociedad de Garantia Reciproca: SGR
+  Sociedad de Garantía Reciproca: SGR
+  Sociedad de Responsabilidad Limitada: SRL
+  Sociedad de responsabilidad limitada: LTD
+  Sociedad del Estado: SE
+  Sociedad en Comandita Simple: SCS
+  Sociedad en Comandita por Acciones: SCpA
+  Sociedad por Acciones: SA
+  Sociedad por acciones: SpA
+  Sociedada Anonima: SA
+  Sociedada Limitada: LTD
+  Sociedade Anónima: SA
+  Sociedade Anônima: SA
+  Sociedade anônima: SA
+  Sociedade limitada: LTD
+  Sociedades por Acciones Simplificada: SAS
+  Sociedá Anónima: SA
+  Societas Cooperativa Europaea: SCE
+  Societas Europaea: SE
+  Societas Privata Europaea: SPE
+  Societat Anònima: SA
+  Societate cu Răspundere Limitată: SRL
+  Societate cu Răspundre Limitată: SRL
+  Societate pe Acțiuni: SA
+  Societatea Comercială: SC
+  Societatea cu Răspundere Limitată: SRL
+  Societatea pe Acţiuni: SA
+  Societete cu Răspundere Limitată: SRL
+  Società Anonima: SA
+  Società a responsabilità limitata: SRL
+  Società in accomandita per azioni: SAPA
+  Società per azioni: SPA
+  Société Anonyme Omanaise Close: SAOC
+  Société Anonyme Omanaise Générale: SAOG
+  Société anonyme: SA
+  Société commerciale canadienne: SCC
+  Société coopérative de production: SCOP
+  Société d'investissement à capital fixe: SICAF
+  Société d'investissement à capital variable: SICAV
+  Société d'économie mixte: SEM
+  Société en commandite par actions: SCA
+  Société en commandite simple: SCS
+  Société en nom collectif: SNC
+  Société en participation: SEP
+  Société par actions de régime fédéral: SA
+  Société par actions simplifiée: SAS
+  Société à responsabilité limitée: SARL
+  Sole Proprietorship: SP
+  Společnost s ručením omezeným: SRO
+  Spółdzielnia: COOP
+  Spółka Akcyjna: SA
+  TES.TEK.DIS: TES TEK DIS
+  TESISAT: TES
+  TIC.A.S.: TIC AS
+  TIC.LTD.STI: TIC LTD STI
+  TICARET: TIC
+  TOB: TOB
+  Tavaristva z Abmezhavanaj Adkaznastsiu: TOB
+  Tokumei Kumiai: TK
+  Täisühing: TÜ
+  Unitar korxona: UK
+  Unlimited: Ultd
+  Unlimited Company: Ultd
+  Unlimited Proprietary: Ultd
+  Unltd: Ultd
+  Usaha Dagang: UD
+  Usaldusühing: UÜ
+  Uždaroji akcinė bendrovė: UAB
+  Vereinigung ohne Gewinnerzielungsabsicht: ASBL
+  Vereniging zonder winstoogmerk: ASBL
+  VoG: ASBL
+  Xususiy korxona: XK
+  Xususiy tadbirkorlik: XT
+  Yopiq aksiyadorlik jamiyati: YoAJ
+  ZAO: ZAO
+  Zakritaye Aktsiyanernaye Tavaristva: ЗАТ
+  a.d.: AD
+  akcionarsko društvo: AD
+  aktiebolag: Ab
+  andelslag: Anl
+  avoin yhtiö: Ay
+  besloten vennootschap met beperkte aansprakelijkheid: BVBA
+  co-op: COOP
+  commanditaire vennootschap op aandelen: CVA
+  cooperative: COOP
+  coopérative: COOP
+  coöperatieve vennootschap met beperkte aansprakelijkheid: CVBA
+  coöperatieve vennootschap met onbeperkte aansprakelijkheid: CVOA
+  d.d.: DD
+  d.n.o.: DNO
+  d.o.o.: DOO
+  dioničko društvo: DD
+  drujestvo s ogranichena otgovornost: OOD
+  društvo s neograničenom solidarnom odgovornošću: DNO
+  društvo s ograničenom odgovornošću: DOO
+  economisch samenwerkingsverband: ESV
+  eenpersoons besloten vennootschap met beperkte aansprakelijkheid: EBVBA
+  eingetragene Genossenschaft: eG
+  eingetragener Verein: EV
+  eingetragenes Einzelunternehmen: eU
+  einkahlutafélag: EHF
+  enskild näringsidkare: F:ma
+  gewone commanditaire vennootschap: CV
+  gospodarsko interesno udruženje: GIU
+  groupement d'intérêt économique: ESV
+  hlutafélag: HF
+  ivzw: VZW
+  j.d.o.o: JDOO
+  j.t.d.: JTD
+  javno trgovačko društvo: JTD
+  jednostavno društvo s ograničenom odgovornošću: JDOO
+  julkinen osakeyhtiö: Oyj
+  k.d.: KD
+  komanditno društvo: KD
+  komanditní společnost: KS
+  kommandiittiyhtiö: Ky
+  kommanditbolag: Kb
+  limited liability partnership: LLP
+  mit besch Haftung: GmbH
+  mit beschr Haftung: GmbH
+  mit beschränkter Haftung: GmbH
+  naamloze vennootschap: NV
+  obecně prospěšná společnost: OPS
+  obiteljsko poljoprivredno gospodarstvo: OPG
+  obrt: OBRT
+  offene Gesellschaft: OG
+  oiminimi: T:mi
+  osakeyhtiö: Oy
+  osuuskunta: osk
+  pool: COOP
+  private limited company: LTD
+  publikt aktiebolag: Abp
+  qapalı tipli səhmdar cəmiyyəti: QSC
+  rekisteröity puolue: RP
+  rekisteröity yhdistys: RY
+  s.p.: SP
+  s.r.o: SRO
+  sameignarfélag: SF
+  samostalni preduzetnik: SP
+  société en participation: SEP
+  société privée à responsabilité limitée: SPRL
+  société privée à responsabilité limitée unipersonnelle: SPRL
+  stille Gesellschaft: stG
+  státní podnik: SP
+  säätiö: RS
+  united: COOP
+  vennootschap onder firma: VOF
+  vereniging zonder winstoogmerk: VZW
+  veřejná obchodní společnost: VOS
+  z.s.: ZS
+  zapsaný spolek: ZS
+  ÎNTERPRINDEREA INDIVIDUALĂ: II
+  ÎNTREPRINDERE INDIVIDUALĂ: II
+  ÎNTREPRINDEREA INDIVIDUALĂ: II
+  ÎNTREPRINDEREA MUNICIPALĂ: IM
+  Întreprindera Individuală: II
+  Întreprindere Individuală: II
+  Întreprindere individuală: II
+  Întreprinderea Individualî: II
+  Întreprinderea Individuală: II
+  Întreprinderea Municipală: IM
+  Întreprinderea de Stat: IS
+  Întreprinderea individuală: II
+  Întreprindserea Individuală: II
+  Întreprinzător Individual: II
+  Întreprinzător individual: II
+  Întreprinzătorul Individual: II
+  Întreprinzătorul individual: II
+  îNTREPRINDEREA INDIVIDUALĂ: II
+  îNTREPRINDEREA INDIVIDUALă: II
+  întreprinderea Individuală: II
+  întreprinzător Individual: II
+  Şube: Şb
+  Ανώνυμη Εταιρεία: AE
+  Ёпиқ акциядорлик жамияти: YoAJ
+  АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ: ANO
+  АД: AD
+  АДСИЦ: ADSITz
+  АКЦИОНЕРНОЕ ОБЩЕСТВО: AO
+  АНО: ANO
+  Автономная некоммерческая организация: ANO
+  Адкрытае акцыянернае таварыства: AAT
+  Акциядорлик жамияти: AG
+  Акціонерне товариство: TOB
+  ГП: UP
+  ГУП: UP
+  Государственное унитарное предприятие: UP
+  ДАТ: SJSC
+  Державне акціонерне товариство: SJSC
+  ЕАД: EAD
+  ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО: ZAO
+  Закрытае ацыянернае таварыства: 3AT
+  Закрытое акционерное общество: ZAO
+  КДА: KDA
+  ЛИКВИДАЦИОННАЯ КОМИССИЯ ОБЩЕСТВА С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ: OOO
+  Ликвидационная комиссия ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ: OOO
+  Ликвидационная комиссия ООО: OOO
+  Ликвидационная комиссия общества с ограниченной ответственностью: OOO
+  Масъулияти Чекланган Жамият: MChJ
+  НП: NP
+  Некоммерческое партнерство: NP
+  Некоммерческое партнёрство: NP
+  ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ: OOO
+  ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ СТРОИТЕЛЬНАЯ КОМПАНИЯ: OOO
+  ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ТОРГОВЫЙ ДОМ: OOO
+  ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ УПРАВЛЯЮЩАЯ КОМПАНИЯ: OOO
+  ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ФИРМА: OOO
+  ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЧАСТНАЯ ОХРАННАЯ ОРГАНИЗАЦИЯ: OOO
+  ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЧАСТНОЕ ОХРАННОЕ ПРЕДПРИЯТИЕ: OOO
+  ООД: OOD
+  ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО: OAO
+  Общество с ограниченной ответственностью: OOO
+  Оилавий корхона: OK
+  Открытое акционерное общество: OAO
+  Очиқ акциядорлик жамияти: OAJ
+  ПАО: RAO
+  Прыватнае унітарнае прадпрыемства: ПУП
+  Публичное акционерное общество: RAO
+  САДОВОДЧЕСКОЕ НЕКОММЕРЧЕСКОЕ ТОВАРИЩЕСТВО: SNT
+  СД: SD
+  Садоводческое некоммерческое товарищество: SNT
+  ТОВАРИЩЕСТВО СОБСТВЕННИКОВ ЖИЛЬЯ: ТСЖ
+  ТОВАРИЩЕСТВО СОБСТВЕННИКОВ НЕДВИЖИМОСТИ: ТСЖ
+  Таварыства з абмежаванай адказнасцю: TOB
+  ТзОВ: TOB
+  Тов: TOB
+  Товариство з обмеженою відповідальністю: TOB
+  Товарищество собственников жилья: ТСЖ
+  Төрийн Бус Байгууллага: ТББ
+  Унитар корхона: UK
+  Хувьцаат Компани: ХК
+  Хусусий корхона: XK
+  Хусусий тадбиркорлик: XT
+  Хязгаарлагдмал Хариуцлагатай Компани: ХХК
+  акционерно дружество: AD
+  акционерно дружество със специална инвестиционна цел: ADSITz
+  дружество с ограничена отговорност: OOD
+  едноличен търговец: ET
+  еднолично акционерно дружество: EAD
+  еднолично дружество с ограничена отговорност: EOOD
+  командитно дружество: KD
+  командитно дружество с акции: KDA
+  събирателно дружество: SD
+  Қўшимча масъулиятли жамият: QMJ
+  Қўшма корхона: QK
+  בע"מ: LTD
+  شركة خفية الإسم: SA
+  شّركة ذات مسؤوليّات محدودة ش.م.م: SARL
+  شّركة فردية ذات مسؤوليّات محدودة: SUARL
+  ሃላፊነቱ የተወሰነ የግል ማህበር: PLC
+  ህብረት ስራ ማህበራት: CS
+  አክሲዩን ማህበር: SC
+  ኮርፖሬሽን: PC
+  የመንግስት ልማት ድርጅቶች: PE
+  任意組合: NK
+  兩合公司: LP
+  匿名組合: TK
+  合同会社: GK
+  合名会社: GMK
+  合資会社: GSK
+  有限会社: YK
+  有限公司: LTD
+  有限責任事業組合: LLP
+  株式会社: KK
+  無限公司: Ultd
+  股份有限公司: PLC

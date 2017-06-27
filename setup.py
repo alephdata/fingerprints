@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='fingerprints',
-    version='0.4.0',
+    version='0.5.0',
     description="A library to generate entity fingerprints.",
     long_description="",
     classifiers=[

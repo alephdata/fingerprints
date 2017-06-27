@@ -1,5 +1,4 @@
 import re
-import six
 import logging
 from normality import collapse_spaces, ascii_text, category_replace
 
@@ -19,8 +18,3 @@ def clean_strict(text):
     # pad out for company type replacements
     text = ''.join((WS, collapse_spaces(text), WS))
     return text
-
-
-def clean_replacement(text):
-    """Apply scrubbing to replacement terms."""
-    return clean_strict(six.text_type(text).lower())
