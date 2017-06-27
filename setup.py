@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='fingerprints',
-    version='0.5.0',
+    version='0.5.1',
     description="A library to generate entity fingerprints.",
     long_description="",
     classifiers=[
@@ -24,7 +24,7 @@ setup(
     packages=find_packages(exclude=['ez_setup', 'examples', 'test']),
     namespace_packages=[],
     package_data={
-        '': ['fingerprint/data.yaml']
+        '': ['fingerprint/data/types.yml']
     },
     include_package_data=True,
     zip_safe=False,
