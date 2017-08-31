@@ -9,4 +9,4 @@ install:
   - pip install -e .
   - pip install pyicu unidecode coverage nose
 script:
-  - nosetests --with-coverage --cover-package=storagelayer --cover-erase
+  - nosetests --with-coverage --cover-package=fingerprintas --cover-erase
