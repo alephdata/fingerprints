@@ -1,5 +1,7 @@
 # fingerprints
 
+[![Build Status](https://travis-ci.org/alephdata/fingerprints.png?branch=master)](https://travis-ci.org/alephdata/fingerprints)
+
 This library helps with the generation of fingerprints for entity data. A fingerprint
 in this context is understood as a simplified entity identifier, derived from it's
 name or address and used for cross-referencing of entity across different datasets.

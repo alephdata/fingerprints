@@ -14,6 +14,11 @@ class FingerprintsTest(TestCase):
         self.assertEqual(fp("Johnson's Coffee Shop"), 'coffee johnsons shop')
         self.assertEqual(fp('New York, New York'), 'new york')
 
+    def test_replacers(self):
+        self.assertEqual(fp('Foo Limited'), 'foo ltd')
+        self.assertEqual(fp('Foo International bla Limited'), 'bla foo intl ltd')  # noqa
+        self.assertEqual(fp('Foo International Limited'), 'foo intl ltd')
+
     def test_cyrillic(self):
         self.assertEqual(fp(u'РАДИК ІВАН ЛЬВОВИЧ'), 'ivan lvovic radik')
         self.assertEqual(fp(u'КУШНАРЬОВ ДМИТРО ВІТАЛІЙОВИЧ'), 'dmitro kusnarov vitalijovic')  # noqa

@@ -10,10 +10,12 @@ DATA_PATH = os.path.join(os.path.dirname(__file__), 'data')
 class TypesReplacer(object):
 
     def __init__(self, replacements):
-        self.replacements = replacements
-        forms = replacements.keys()
+        replacements = [(k.strip(), v) for (k, v) in replacements.items()]
+        replacements = [(k, v) for (k, v) in replacements if len(k)]
+        self.replacements = dict(replacements)
+        forms = self.replacements.keys()
         forms = sorted(forms, key=lambda ct: -1 * len(ct))
-        forms = '(%s)' % '|'.join(forms)
+        forms = '\\b(%s)\\b' % '|'.join(forms)
         self.matcher = re.compile(forms, re.U)
 
     def get_canonical(self, match):
