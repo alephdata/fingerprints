@@ -5,7 +5,7 @@ build:
 	python fetch.py
 
 test:
-	python test.py
+	nosetests --with-coverage --cover-package=fingerprints --cover-erase
 
 dists:
 	python setup.py sdist bdist_wheel

@@ -4,3 +4,5 @@
 *.eggs
 dist/*
 build/*
+.vscode
+.coverage
