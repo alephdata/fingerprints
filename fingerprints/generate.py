@@ -3,8 +3,7 @@ from normality import collapse_spaces, stringify
 
 from fingerprints.constants import BRACKETED, WS
 from fingerprints.replacers import replace_types
-from fingerprints.text import clean_strict
-from fingerprints.prefix import remove_person_prefix
+from fingerprints.cleanup import clean_entity_name, clean_strict
 
 log = logging.getLogger(__name__)
 
@@ -16,7 +15,7 @@ def generate(text, keep_order=False):
 
     # this needs to happen before the replacements
     text = text.lower()
-    text = remove_person_prefix(text)
+    text = clean_entity_name(text)
 
     # remove any text in brackets
     text = BRACKETED.sub(WS, text)

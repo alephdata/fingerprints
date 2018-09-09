@@ -2,7 +2,7 @@ import os
 import re
 import yaml
 
-from fingerprints.text import clean_strict
+from fingerprints.cleanup import clean_strict
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), 'data')
 
