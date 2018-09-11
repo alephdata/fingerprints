@@ -8,19 +8,19 @@ from fingerprints.constants import WS
 log = logging.getLogger(__name__)
 
 CHARACTERS_REMOVE_RE = re.compile(r'[\.\']')
+
+PREFIXES_RAW = ['Mr', 'Mrs', 'Mister', 'Miss', 'Madam', 'Madame',
+                'Monsieur', 'Mme', 'Mmme', 'Herr', 'Hr', 'Frau',
+                'Fr', 'The', u'Fräulein', 'Senor', 'Senorita',
+                'Sr', 'Sir', 'Lady', 'The', 'A', 'de', 'of']
+PREFIXES_RAW = '|'.join(PREFIXES_RAW)
 NAME_PATTERN = r'^\W*((%s)\.?\s+)*(?P<term>.*?)([\'’]s)?\W*$'
-PERSON_PREFIXES_RAW = ['Mr', 'Mrs', 'Mister', 'Miss', 'Madam', 'Madame',
-                       'Monsieur', 'Mme', 'Mmme', 'Herr', 'Hr', 'Frau',
-                       'Fr', 'The', u'Fräulein', 'Senor', 'Senorita',
-                       'Sr', 'Sir', 'Lady']
-ORG_PREFIXES_RAW = ['The', 'A', 'de', 'of']
-ALL_PREFIXES_RAW = PERSON_PREFIXES_RAW + ORG_PREFIXES_RAW
-ALL_PREFIXES_RAW = '|'.join(ALL_PREFIXES_RAW)
-ALL_PREFIXES = re.compile(NAME_PATTERN % ALL_PREFIXES_RAW, re.I | re.U)
+NAME_PATTERN = NAME_PATTERN % PREFIXES_RAW
+PREFIXES = re.compile(NAME_PATTERN.encode('utf-8'), re.I | re.U)
 
 
 def clean_entity_name(name):
-    match = ALL_PREFIXES.match(name)
+    match = PREFIXES.match(name)
     if match is not None:
         text = match.group('term')
     return text
