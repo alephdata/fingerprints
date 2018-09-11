@@ -1,5 +1,6 @@
 # coding: utf-8
 import re
+import six
 import logging
 from normality import collapse_spaces, ascii_text, category_replace
 
@@ -13,7 +14,9 @@ PREFIXES_RAW = ['Mr', 'Mrs', 'Mister', 'Miss', 'Madam', 'Madame',
                 'Monsieur', 'Mme', 'Mmme', 'Herr', 'Hr', 'Frau',
                 'Fr', 'The', u'Fräulein', 'Senor', 'Senorita',
                 'Sr', 'Sir', 'Lady', 'The', 'A', 'de', 'of']
-PREFIXES_RAW = '|'.join(PREFIXES_RAW).encode('utf-8')
+PREFIXES_RAW = '|'.join(PREFIXES_RAW)
+if six.PY2:
+    PREFIXES_RAW = PREFIXES_RAW.encode('utf-8')
 NAME_PATTERN = r'^\W*((%s)\.?\s+)*(?P<term>.*?)([\'’]s)?\W*$'
 NAME_PATTERN = NAME_PATTERN % PREFIXES_RAW
 PREFIXES = re.compile(NAME_PATTERN, re.I | re.U)
