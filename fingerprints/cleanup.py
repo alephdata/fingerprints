@@ -13,7 +13,7 @@ CHARACTERS_REMOVE_RE = re.compile(r'[\.\']')
 PREFIXES_RAW = ['Mr', 'Mrs', 'Mister', 'Miss', 'Madam', 'Madame',
                 'Monsieur', 'Mme', 'Mmme', 'Herr', 'Hr', 'Frau',
                 'Fr', 'The', u'Fräulein', 'Senor', 'Senorita',
-                'Sr', 'Sir', 'Lady', 'The', 'A', 'de', 'of']
+                'Sr', 'Sir', 'Lady', 'The', 'de', 'of']
 PREFIXES_RAW = '|'.join(PREFIXES_RAW)
 if six.PY2:
     PREFIXES_RAW = PREFIXES_RAW.encode('utf-8')
@@ -25,8 +25,8 @@ PREFIXES = re.compile(NAME_PATTERN, re.I | re.U)
 def clean_entity_name(name):
     match = PREFIXES.match(name)
     if match is not None:
-        text = match.group('term')
-    return text
+        name = match.group('term')
+    return name
 
 
 def clean_strict(text, boundary=WS):
