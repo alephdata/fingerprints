@@ -10,7 +10,7 @@ log = logging.getLogger(__name__)
 
 CHARACTERS_REMOVE_RE = re.compile(r'[\.\']')
 
-PREFIXES_RAW = ['Mr', 'Mrs', 'Mister', 'Miss', 'Madam', 'Madame',
+PREFIXES_RAW = ['Mr', 'Ms', 'Mrs', 'Mister', 'Miss', 'Madam', 'Madame',
                 'Monsieur', 'Mme', 'Mmme', 'Herr', 'Hr', 'Frau',
                 'Fr', 'The', u'Fräulein', 'Senor', 'Senorita',
                 'Sr', 'Sir', 'Lady', 'The', 'de', 'of']
