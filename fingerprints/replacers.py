@@ -29,7 +29,7 @@ def build_replacer():
     types_file = os.path.join(DATA_PATH, 'types.yml')
     replacements = {}
     with open(types_file, 'r') as fh:
-        types = yaml.load(fh).get('types', {})
+        types = yaml.safe_load(fh).get('types', {})
         # Compile person prefixes into a regular expression.
         for form, canonical in types.items():
             form = clean_strict(form).lower()
