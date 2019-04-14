@@ -7,6 +7,12 @@ before_install:
   - sudo apt-get install -y libicu-dev
 install:
   - pip install -e .
-  - pip install pyicu coverage nose
+  - pip install pyicu coverage nose twine
 script:
   - nosetests --with-coverage --cover-package=fingerprints --cover-erase
+after_success:
+  # push tag as well
+  - if [[ $TRAVIS_TAG = $TRAVIS_BRANCH ]]; then
+      python setup.py sdist bdist_wheel ;
+      twine upload dist/* ;
+    fi

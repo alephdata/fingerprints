@@ -1,7 +1,7 @@
 
 all: clean test dists
 
-build:
+fetch:
 	python fetch.py
 
 test:

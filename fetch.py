@@ -1,8 +1,8 @@
 import os
 import yaml
-import urllib
 import unicodecsv
 from normality import stringify
+from urllib.request import urlopen
 # TODO: https://en.wikipedia.org/wiki/Types_of_business_entity
 
 CSV_URL = 'https://docs.google.com/spreadsheets/d/1Cw2xQ3hcZOAgnnzejlY5Sv3OeMxKePTqcRhXQU8rCAw/pub?gid=0&single=true&output=csv'  # noqa
@@ -11,7 +11,7 @@ CSV_URL = 'https://docs.google.com/spreadsheets/d/1Cw2xQ3hcZOAgnnzejlY5Sv3OeMxKe
 def fetch():
     out_path = os.path.dirname(__file__)
     out_path = os.path.join(out_path, 'fingerprints', 'data', 'types.yml')
-    fh = urllib.urlopen(CSV_URL)
+    fh = urlopen(CSV_URL)
     types = {}
     for row in unicodecsv.DictReader(fh):
         name = stringify(row.get('Name'))
@@ -19,7 +19,7 @@ def fetch():
         if name is None or abbr is None:
             continue
         if name in types and types[name] != abbr:
-            print name, types[name], abbr
+            print(name, types[name], abbr)
         types[name] = abbr
         # print abbr, name
 
