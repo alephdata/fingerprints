@@ -7,6 +7,6 @@ before_install:
   - sudo apt-get install -y libicu-dev
 install:
   - pip install -e .
-  - pip install pyicu text_unidecode coverage nose
+  - pip install pyicu coverage nose
 script:
   - nosetests --with-coverage --cover-package=fingerprints --cover-erase
