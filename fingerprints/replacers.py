@@ -1,3 +1,4 @@
+import io
 import os
 import re
 import yaml
@@ -28,7 +29,7 @@ class TypesReplacer(object):
 def build_replacer():
     types_file = os.path.join(DATA_PATH, 'types.yml')
     replacements = {}
-    with open(types_file, 'r') as fh:
+    with io.open(types_file, 'r', encoding='utf-8') as fh:
         types = yaml.safe_load(fh).get('types', {})
         # Compile person prefixes into a regular expression.
         for form, canonical in types.items():
