@@ -5,7 +5,7 @@ with open('README.md') as f:
 
 setup(
     name='fingerprints',
-    version='0.6.6',
+    version='1.0.0',
     description="A library to generate entity fingerprints.",
     long_description=long_description,
     long_description_content_type='text/markdown',
