@@ -8,7 +8,7 @@ from fingerprints.cleanup import clean_entity_name, clean_strict
 log = logging.getLogger(__name__)
 
 
-def generate(text, keep_order=False):
+def generate(text, keep_order=False, keep_brackets=False):
     text = stringify(text)
     if text is None:
         return
@@ -17,10 +17,13 @@ def generate(text, keep_order=False):
     text = text.lower()
     text = clean_entity_name(text)
 
-    # remove any text in brackets
-    text = BRACKETED.sub(WS, text)
+    if not keep_brackets:
+        # Remove any text in brackets
+        # This is meant to handle names of companies which include
+        # the jurisdiction, like: Turtle Management (Seychelles) Ltd.
+        text = BRACKETED.sub(WS, text)
 
-    # super hard-core string scrubbing
+    # Super hard-core string scrubbing
     text = clean_strict(text)
     text = replace_types(text)
 
