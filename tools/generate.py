@@ -1,19 +1,21 @@
 import os
-import yaml
-import unicodecsv
+import io
+import csv
+import json
+from pprint import pprint  # noqa
 from normality import stringify
 from urllib.request import urlopen
-# TODO: https://en.wikipedia.org/wiki/Types_of_business_entity
 
 CSV_URL = 'https://docs.google.com/spreadsheets/d/1Cw2xQ3hcZOAgnnzejlY5Sv3OeMxKePTqcRhXQU8rCAw/pub?gid=0&single=true&output=csv'  # noqa
 
 
 def fetch():
-    out_path = os.path.dirname(__file__)
-    out_path = os.path.join(out_path, 'fingerprints', 'data', 'types.yml')
-    fh = urlopen(CSV_URL)
+    file_path = os.path.dirname(__file__)
+    out_path = os.path.join(file_path, '..', 'fingerprints', 'types.json')
     types = {}
-    for row in unicodecsv.DictReader(fh):
+    fh = urlopen(CSV_URL)
+    fh = io.TextIOWrapper(fh, encoding='utf-8')
+    for row in csv.DictReader(fh):
         name = stringify(row.get('Name'))
         abbr = stringify(row.get('Abbreviation'))
         if name is None or abbr is None:
@@ -23,12 +25,13 @@ def fetch():
         types[name] = abbr
         # print abbr, name
 
+    elf_path = os.path.join(file_path, 'elf-code-list.csv')
+    with open(elf_path, 'r') as fh:
+        for row in csv.DictReader(fh):
+            pprint(dict(row))
+
     with open(out_path, 'w') as fh:
-        yaml.safe_dump({'types': types}, fh,
-                       indent=2,
-                       allow_unicode=True,
-                       canonical=False,
-                       default_flow_style=False)
+        json.dump({'types': types}, fh)
 
 
 if __name__ == '__main__':

@@ -24,16 +24,11 @@ setup(
     license='MIT',
     packages=find_packages(exclude=['ez_setup', 'examples', 'test']),
     namespace_packages=[],
-    package_data={
-        '': ['fingerprints/data/types.yml']
-    },
+    package_data={'': ['fingerprints/types.json']},
     include_package_data=True,
     zip_safe=False,
     test_suite='nose.collector',
-    install_requires=[
-        'normality>=2.0.0',
-        'pyyaml'
-    ],
+    install_requires=['normality>=2.0.0'],
     tests_require=[
         'nose',
         'coverage',

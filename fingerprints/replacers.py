@@ -1,11 +1,11 @@
 import io
 import os
 import re
-import yaml
+import json
 
 from fingerprints.cleanup import clean_strict
 
-DATA_PATH = os.path.join(os.path.dirname(__file__), 'data')
+DATA_PATH = os.path.join(os.path.dirname(__file__), 'types.json')
 
 
 class TypesReplacer(object):
@@ -27,10 +27,9 @@ class TypesReplacer(object):
 
 
 def build_replacer():
-    types_file = os.path.join(DATA_PATH, 'types.yml')
     replacements = {}
-    with io.open(types_file, 'r', encoding='utf-8') as fh:
-        types = yaml.safe_load(fh).get('types', {})
+    with io.open(DATA_PATH, 'r', encoding='utf-8') as fh:
+        types = json.load(fh).get('types', {})
         # Compile person prefixes into a regular expression.
         for form, canonical in types.items():
             form = clean_strict(form).lower()

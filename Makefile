@@ -1,8 +1,8 @@
 
-all: fetch clean test
+all: generate clean test
 
-fetch:
-	python fetch.py
+generate:
+	python tools/generate.py
 
 test:
 	nosetests --with-coverage --cover-package=fingerprints --cover-erase

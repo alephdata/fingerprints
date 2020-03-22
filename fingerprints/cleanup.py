@@ -29,10 +29,10 @@ def clean_strict(text, boundary=WS):
     """Super-hardcore string scrubbing."""
     # transliterate to ascii
     text = ascii_text(text)
-    if isinstance(text, str):
-        # replace punctuation and symbols
-        text = CHARACTERS_REMOVE_RE.sub('', text)
-        text = category_replace(text)
-        # pad out for company type replacements
-        text = ''.join((boundary, collapse_spaces(text), boundary))
-    return text
+    if not isinstance(text, str):
+        return None
+    # replace punctuation and symbols
+    text = CHARACTERS_REMOVE_RE.sub('', text)
+    text = category_replace(text)
+    # pad out for company type replacements
+    return ''.join((boundary, collapse_spaces(text), boundary))
