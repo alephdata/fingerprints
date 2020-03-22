@@ -1,4 +1,3 @@
-# coding: utf-8
 from unittest import TestCase
 
 import fingerprints
@@ -20,21 +19,28 @@ class FingerprintsTest(TestCase):
         self.assertEqual(fp('Foo International Limited'), 'foo intl ltd')
 
     def test_cyrillic(self):
-        self.assertEqual(fp(u'РАДИК ІВАН ЛЬВОВИЧ'), 'ivan lvovic radik')
-        self.assertEqual(fp(u'КУШНАРЬОВ ДМИТРО ВІТАЛІЙОВИЧ'), 'dmitro kusnarov vitalijovic')  # noqa
-        self.assertEqual(fp(u'Порошенко Петро Олексійович'), 'oleksijovic petro porosenko')  # noqa
+        self.assertEqual(fp('РАДИК ІВАН ЛЬВОВИЧ'), 'ivan lvovic radik')
+        self.assertEqual(fp('КУШНАРЬОВ ДМИТРО ВІТАЛІЙОВИЧ'), 'dmitro kusnarov vitalijovic')  # noqa
+        self.assertEqual(fp('Порошенко Петро Олексійович'), 'oleksijovic petro porosenko')  # noqa
 
     def test_turcic(self):
-        self.assertEqual(fp(u'FUAD ALIYEV ƏHMƏD OĞLU'),
-                         'ahmad aliyev fuad oglu')
+        self.assertEqual(fp('FUAD ALIYEV ƏHMƏD OĞLU'), 'ahmad aliyev fuad oglu')  # noqa
 
     def test_german(self):
-        self.assertEqual(fp(u'Siemens Aktiengesellschaft'), 'ag siemens')  # noqa
-        self.assertEqual(fp(u'Software und- Systemgesellschaft mit beschr Haftung'),  # noqa
+        self.assertEqual(fp('Siemens Aktiengesellschaft'), 'ag siemens')  # noqa
+        self.assertEqual(fp('Software und- Systemgesellschaft mit beschr Haftung'),  # noqa
                          'gmbh software systemgesellschaft und')  # noqa
 
     def test_company(self):
         self.assertEqual(fp('S.R.L. "Magic-Arrow" ICS'), 'arrow ics magic srl')  # noqa
 
     def test_brackets(self):
-        self.assertEqual(fp(u'Foo (Bar) CORPORATION'), 'corp foo')  # noqa
+        self.assertEqual(fp('Foo (Bar) CORPORATION'), 'corp foo')  # noqa
+
+    def test_remove(self):
+        rem = fingerprints.remove_types('Siemens Aktiengesellschaft')
+        self.assertEqual(rem, 'Siemens')  # noqa
+        rem = fingerprints.remove_types('Siemens AG')
+        self.assertEqual(rem, 'Siemens')  # noqa
+        rem = fingerprints.remove_types('Foo Limited')
+        self.assertEqual(rem, 'Foo')

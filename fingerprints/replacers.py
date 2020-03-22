@@ -1,4 +1,3 @@
-import io
 import os
 import re
 import json
@@ -28,7 +27,7 @@ class TypesReplacer(object):
 
 def build_replacer():
     replacements = {}
-    with io.open(DATA_PATH, 'r', encoding='utf-8') as fh:
+    with open(DATA_PATH, 'r') as fh:
         types = json.load(fh).get('types', {})
         # Compile person prefixes into a regular expression.
         for form, canonical in types.items():
@@ -60,3 +59,27 @@ def replace_types(text):
     if not hasattr(replace_types, '_replacer'):
         replace_types._replacer = build_replacer()
     return replace_types._replacer(text)
+
+
+def remove_types(text, clean=clean_strict):
+    """Remove company type names from a piece of text.
+
+    WARNING: This converts to ASCII by default, pass in a different
+    `clean` function if you need a different behaviour."""
+    if not hasattr(remove_types, '_remove'):
+        remove_types._remove = {}
+    if clean not in remove_types._remove:
+        names = set()
+        with open(DATA_PATH, 'r') as fh:
+            types = json.load(fh).get('types', {})
+            # Compile person prefixes into a regular expression.
+            for items in types.items():
+                for item in items:
+                    item = clean(item)
+                    if item is not None:
+                        names.add(item)
+        forms = '(%s)' % '|'.join(names)
+        remove_types._remove[clean] = re.compile(forms, re.U)
+    text = clean(text)
+    if text is not None:
+        return remove_types._remove[clean].sub('', text).strip()
