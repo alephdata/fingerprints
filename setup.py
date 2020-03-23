@@ -22,7 +22,7 @@ setup(
     author_email='friedrich@pudo.org',
     url='http://github.com/alephdata/fingerprints',
     license='MIT',
-    packages=find_packages(exclude=['ez_setup', 'examples', 'test']),
+    packages=find_packages(exclude=['tests']),
     namespace_packages=[],
     package_data={'': ['fingerprints/types.json']},
     include_package_data=True,
