@@ -86,7 +86,9 @@ def get_remover(clean):
     return re.compile(forms, re.U)
 
 
-def remove_types(text: Optional[str], clean: Callable = clean_strict) -> Optional[str]:
+def remove_types(
+    text: Optional[str], clean: Callable[[Optional[str]], Optional[str]] = clean_strict
+) -> Optional[str]:
     """Remove company type names from a piece of text.
 
     WARNING: This converts to ASCII by default, pass in a different
