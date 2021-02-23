@@ -15,8 +15,11 @@ jobs:
       run: |
         sudo apt-get install -y libicu-dev
         python -m pip install --upgrade pip wheel
-        pip install pyicu coverage nose
+        pip install pyicu coverage nose mypy
         pip install -e .
+    - name: Type checking
+      run: |
+        mypy fingerprints
     - name: Test with pytest
       run: |
         nosetests --with-coverage --cover-package=fingerprints --cover-erase

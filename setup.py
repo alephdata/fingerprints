@@ -29,5 +29,5 @@ setup(
     zip_safe=False,
     test_suite="nose.collector",
     install_requires=["normality>=2.0.0"],
-    tests_require=["nose", "coverage", "wheel"],
+    tests_require=["nose", "coverage", "wheel", "mypy"],
 )
