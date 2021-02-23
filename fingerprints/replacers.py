@@ -1,6 +1,8 @@
 import os
 import re
 import json
+from functools import lru_cache
+from typing import Dict, Optional, Callable
 
 from fingerprints.cleanup import clean_strict
 
@@ -13,9 +15,9 @@ class TypesReplacer(object):
         replacements = [(k, v) for (k, v) in replacements if len(k)]
         self.replacements = dict(replacements)
         forms = self.replacements.keys()
-        forms = sorted(forms, key=lambda ct: -1 * len(ct))
-        forms = "\\b(%s)\\b" % "|".join(forms)
-        self.matcher = re.compile(forms, re.U)
+        forms_sorted = sorted(forms, key=lambda ct: -1 * len(ct))
+        forms_regex = "\\b(%s)\\b" % "|".join(forms_sorted)
+        self.matcher = re.compile(forms_regex, re.U)
 
     def get_canonical(self, match):
         return self.replacements.get(match.group(1), match.group(1))
@@ -25,13 +27,17 @@ class TypesReplacer(object):
 
 
 def build_replacer():
-    replacements = {}
+    replacements: Dict[str, str] = {}
     with open(DATA_PATH, "r") as fh:
         types = json.load(fh).get("types", {})
         # Compile person prefixes into a regular expression.
         for form, canonical in types.items():
-            form = clean_strict(form).lower()
-            canonical = clean_strict(canonical).lower()
+            form = clean_strict(form)
+            canonical = clean_strict(canonical)
+            if form is None or canonical is None:
+                continue
+            form = form.lower()
+            canonical = canonical.lower()
             if form == canonical:
                 continue
             replacements[form] = canonical
@@ -53,32 +59,39 @@ def build_replacer():
     return TypesReplacer(replacements)
 
 
-def replace_types(text):
+@lru_cache(maxsize=None)
+def get_replacer():
+    return build_replacer()
+
+
+def replace_types(text: Optional[str]) -> Optional[str]:
     """Chomp down company types to a more convention form."""
-    if not hasattr(replace_types, "_replacer"):
-        replace_types._replacer = build_replacer()
-    return replace_types._replacer(text)
+    if text is None:
+        return None
+    return get_replacer()(text)
 
 
-def remove_types(text, clean=clean_strict):
+@lru_cache(maxsize=None)
+def get_remover(clean):
+    names = set()
+    with open(DATA_PATH, "r") as fh:
+        types = json.load(fh).get("types", {})
+        # Compile person prefixes into a regular expression.
+        for items in types.items():
+            for item in items:
+                item = clean(item)
+                if item is not None:
+                    names.add(item)
+    forms = "(%s)" % "|".join(names)
+    return re.compile(forms, re.U)
+
+
+def remove_types(text: Optional[str], clean: Callable = clean_strict) -> Optional[str]:
     """Remove company type names from a piece of text.
 
     WARNING: This converts to ASCII by default, pass in a different
     `clean` function if you need a different behaviour."""
-    if not hasattr(remove_types, "_remove"):
-        remove_types._remove = {}
-    if clean not in remove_types._remove:
-        names = set()
-        with open(DATA_PATH, "r") as fh:
-            types = json.load(fh).get("types", {})
-            # Compile person prefixes into a regular expression.
-            for items in types.items():
-                for item in items:
-                    item = clean(item)
-                    if item is not None:
-                        names.add(item)
-        forms = "(%s)" % "|".join(names)
-        remove_types._remove[clean] = re.compile(forms, re.U)
     text = clean(text)
-    if text is not None:
-        return remove_types._remove[clean].sub("", text).strip()
+    if text is None:
+        return None
+    return get_remover(clean).sub("", text).strip()

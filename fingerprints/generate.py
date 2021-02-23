@@ -1,4 +1,5 @@
 import logging
+from typing import Optional
 from normality import collapse_spaces, stringify
 
 from fingerprints.constants import BRACKETED, WS
@@ -8,10 +9,12 @@ from fingerprints.cleanup import clean_entity_name, clean_strict
 log = logging.getLogger(__name__)
 
 
-def generate(text, keep_order=False, keep_brackets=False):
+def generate(
+    text: Optional[str], keep_order: bool = False, keep_brackets: bool = False
+) -> Optional[str]:
     text = stringify(text)
     if text is None:
-        return
+        return None
 
     # this needs to happen before the replacements
     text = text.lower()
@@ -29,12 +32,12 @@ def generate(text, keep_order=False, keep_brackets=False):
 
     if keep_order:
         text = collapse_spaces(text)
-    else:
+    elif text is not None:
         # final manicure, based on openrefine algo
         parts = [p for p in text.split(WS) if len(p)]
         text = WS.join(sorted(set(parts)))
 
-    if not len(text):
+    if text is None or not len(text):
         return None
 
     return text
