@@ -6,14 +6,36 @@ from fingerprints.constants import WS
 
 log = logging.getLogger(__name__)
 
-CHARACTERS_REMOVE_RE = re.compile(r'[\.\']')
+CHARACTERS_REMOVE_RE = re.compile(r"[\.\']")
 
-PREFIXES_RAW = ['Mr', 'Ms', 'Mrs', 'Mister', 'Miss', 'Madam', 'Madame',
-                'Monsieur', 'Mme', 'Mmme', 'Herr', 'Hr', 'Frau',
-                'Fr', 'The', 'Fräulein', 'Senor', 'Senorita',
-                'Sr', 'Sir', 'Lady', 'The', 'de', 'of']
-PREFIXES_RAW = '|'.join(PREFIXES_RAW)
-NAME_PATTERN = r'^\W*((%s)\.?\s+)*(?P<term>.*?)([\'’]s)?\W*$'
+PREFIXES_RAW = [
+    "Mr",
+    "Ms",
+    "Mrs",
+    "Mister",
+    "Miss",
+    "Madam",
+    "Madame",
+    "Monsieur",
+    "Mme",
+    "Mmme",
+    "Herr",
+    "Hr",
+    "Frau",
+    "Fr",
+    "The",
+    "Fräulein",
+    "Senor",
+    "Senorita",
+    "Sr",
+    "Sir",
+    "Lady",
+    "The",
+    "de",
+    "of",
+]
+PREFIXES_RAW = "|".join(PREFIXES_RAW)
+NAME_PATTERN = r"^\W*((%s)\.?\s+)*(?P<term>.*?)([\'’]s)?\W*$"
 NAME_PATTERN = NAME_PATTERN % PREFIXES_RAW
 PREFIXES = re.compile(NAME_PATTERN, re.I | re.U)
 
@@ -21,7 +43,7 @@ PREFIXES = re.compile(NAME_PATTERN, re.I | re.U)
 def clean_entity_name(name):
     match = PREFIXES.match(name)
     if match is not None:
-        name = match.group('term')
+        name = match.group("term")
     return name
 
 
@@ -32,7 +54,7 @@ def clean_strict(text, boundary=WS):
     if not isinstance(text, str):
         return None
     # replace punctuation and symbols
-    text = CHARACTERS_REMOVE_RE.sub('', text)
+    text = CHARACTERS_REMOVE_RE.sub("", text)
     text = category_replace(text)
     # pad out for company type replacements
-    return ''.join((boundary, collapse_spaces(text), boundary))
+    return "".join((boundary, collapse_spaces(text), boundary))

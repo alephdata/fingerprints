@@ -1,4 +1,4 @@
 import re
 
-BRACKETED = re.compile(r'(\([^\(\)]*\)|\[[^\[\]]*\])')
-WS = ' '
+BRACKETED = re.compile(r"(\([^\(\)]*\)|\[[^\[\]]*\])")
+WS = " "
