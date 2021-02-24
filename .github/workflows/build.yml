@@ -19,7 +19,7 @@ jobs:
         pip install -e .
     - name: Type checking
       run: |
-        mypy fingerprints
+        mypy --strict fingerprints
     - name: Test with pytest
       run: |
         nosetests --with-coverage --cover-package=fingerprints --cover-erase

@@ -2,7 +2,7 @@ import os
 import re
 import json
 from functools import lru_cache
-from typing import Dict, Optional, Callable
+from typing import Dict, Optional, Callable, Match, Pattern
 
 from fingerprints.cleanup import clean_strict
 
@@ -10,23 +10,23 @@ DATA_PATH = os.path.join(os.path.dirname(__file__), "types.json")
 
 
 class TypesReplacer(object):
-    def __init__(self, replacements):
-        replacements = [(k.strip(), v) for (k, v) in replacements.items()]
-        replacements = [(k, v) for (k, v) in replacements if len(k)]
-        self.replacements = dict(replacements)
+    def __init__(self, replacements: Dict[str, str]) -> None:
+        pairs = [(k.strip(), v) for (k, v) in replacements.items()]
+        pairs = [(k, v) for (k, v) in pairs if len(k)]
+        self.replacements = dict(pairs)
         forms = self.replacements.keys()
         forms_sorted = sorted(forms, key=lambda ct: -1 * len(ct))
         forms_regex = "\\b(%s)\\b" % "|".join(forms_sorted)
         self.matcher = re.compile(forms_regex, re.U)
 
-    def get_canonical(self, match):
+    def get_canonical(self, match: Match[str]) -> str:
         return self.replacements.get(match.group(1), match.group(1))
 
-    def __call__(self, text):
+    def __call__(self, text: str) -> str:
         return self.matcher.sub(self.get_canonical, text)
 
 
-def build_replacer():
+def build_replacer() -> Callable[[str], str]:
     replacements: Dict[str, str] = {}
     with open(DATA_PATH, "r") as fh:
         types = json.load(fh).get("types", {})
@@ -60,7 +60,7 @@ def build_replacer():
 
 
 @lru_cache(maxsize=None)
-def get_replacer():
+def get_replacer() -> Callable[[str], str]:
     return build_replacer()
 
 
@@ -72,7 +72,7 @@ def replace_types(text: Optional[str]) -> Optional[str]:
 
 
 @lru_cache(maxsize=None)
-def get_remover(clean):
+def get_remover(clean: Callable[[Optional[str]], Optional[str]]) -> Pattern[str]:
     names = set()
     with open(DATA_PATH, "r") as fh:
         types = json.load(fh).get("types", {})
