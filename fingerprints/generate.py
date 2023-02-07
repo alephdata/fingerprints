@@ -3,7 +3,7 @@ from typing import Optional
 from normality import collapse_spaces, stringify
 
 from fingerprints.constants import BRACKETED, WS
-from fingerprints.replacers import replace_types
+from fingerprints.types import replace_types
 from fingerprints.cleanup import clean_entity_name, clean_strict
 
 log = logging.getLogger(__name__)
