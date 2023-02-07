@@ -2,10 +2,15 @@
 all: generate clean test
 
 generate:
-	python tools/generate.py
+	python fingerprints/types/check.py
+	python fingerprints/types/compile.py
+	black fingerprints/types/data.py
 
 test:
-	nosetests --with-coverage --cover-package=fingerprints --cover-erase
+	pytest --cov=fingerprints --cov-report html --cov-report term
+
+typecheck:
+	mypy --strict fingerprints/
 
 clean:
 	rm -rf dist build .eggs .mypy_cache

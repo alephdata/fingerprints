@@ -4,6 +4,7 @@ from functools import lru_cache
 from typing import Callable, Optional, Dict, Match
 
 from fingerprints.types.data import TYPES
+from fingerprints.constants import WS
 from fingerprints.cleanup import clean_strict
 
 log = logging.getLogger(__name__)
@@ -12,19 +13,19 @@ ReplaceFunc = Callable[[Optional[str]], Optional[str]]
 
 
 class Replacer(object):
-    def __init__(
-        self, replacements: Dict[str, str], replace_all: Optional[str] = None
-    ) -> None:
+    def __init__(self, replacements: Dict[str, str], remove: bool = False) -> None:
         self.replacements = replacements
-        self.replace_all = replace_all
-        forms = self.replacements.keys()
+        self.remove = remove
+        forms = set(self.replacements.keys())
+        if remove:
+            forms.update(self.replacements.values())
         forms_sorted = sorted(forms, key=lambda ct: -1 * len(ct))
         forms_regex = "\\b(%s)\\b" % "|".join(forms_sorted)
         self.matcher = re.compile(forms_regex, re.U)
 
     def get_canonical(self, match: Match[str]) -> str:
-        if self.replace_all is not None:
-            return self.replace_all
+        if self.remove:
+            return WS
         return self.replacements.get(match.group(1), match.group(1))
 
     def __call__(self, text: Optional[str]) -> Optional[str]:
@@ -45,6 +46,8 @@ def normalize_replacements(norm_func: NormFunc) -> Dict[str, str]:
             if form_norm is None:
                 log.warning("Form is normalized to null [%r]: %r", type["main"], form)
                 continue
+            if form_norm == main_norm:
+                continue
             if form_norm in replacements and replacements[form_norm] != main_norm:
                 log.warning(
                     "Form has duplicate mains: %r (%r, %r)",
@@ -58,12 +61,9 @@ def normalize_replacements(norm_func: NormFunc) -> Dict[str, str]:
 
 
 @lru_cache(maxsize=None)
-def get_replacer(
-    clean: NormFunc = clean_strict,
-    replace_all: Optional[str] = None,
-) -> ReplaceFunc:
+def get_replacer(clean: NormFunc = clean_strict, remove: bool = False) -> ReplaceFunc:
     replacements = normalize_replacements(clean)
-    return Replacer(replacements, replace_all=replace_all)
+    return Replacer(replacements, remove=remove)
 
 
 if __name__ == "__main__":

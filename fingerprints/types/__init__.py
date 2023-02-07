@@ -1,4 +1,5 @@
 from typing import Optional
+from normality import collapse_spaces
 
 from fingerprints.cleanup import clean_strict
 from fingerprints.types.replacer import get_replacer, NormFunc
@@ -15,4 +16,5 @@ def remove_types(text: Optional[str], clean: NormFunc = clean_strict) -> Optiona
     WARNING: This converts to ASCII by default, pass in a different
     `clean` function if you need a different behaviour."""
     text = clean(text)
-    return get_replacer(clean, replace_all="")(text)
+    removed = get_replacer(clean, remove=True)(text)
+    return collapse_spaces(removed)

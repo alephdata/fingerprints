@@ -24,6 +24,8 @@ def check_types_file() -> None:
         cur_forms: Set[str] = set()
         for form in type["forms"]:
             form = form.lower()
+            if form == main:
+                continue
             cur_forms.add(form)
             if form in forms:
                 print("DUPLICATE FORM", form)

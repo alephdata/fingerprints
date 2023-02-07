@@ -1,24 +1,7 @@
 types:
-- main: (ju)
-  forms:
-  - jusikhoesa
-  - ㈜
-  - 주식회사
-- main: (yu)
-  forms:
-  - (유)
-  - yuhanhoesa
-  - 유한회사
 - main: 3at
   forms:
   - закрытае ацыянернае таварыства
-- main: a.d
-  forms:
-  - ad
-  - akcionarsko društvo
-  - а.д
-  - ад
-  - акционарско друштво
 - main: aat
   forms:
   - adkritaye aktsiyanernaye tavaristva
@@ -27,38 +10,26 @@ types:
   - адкрытае акцыянернае таварыства
 - main: ab
   forms:
+  - abp
   - aktiebolag
-  - publikt aktiebolag
-- main: ab
-  forms:
-  - aktiebolag
-- main: abp
-  forms:
   - publikt aktiebolag
 - main: abv
   forms:
   - aandeelhouder-bestuurde vennootschap
 - main: ad
   forms:
+  - a.d
   - a.d.
   - akcionarsko društvo
   - aktsionerno druzhestvo
-  - ад
-  - акционерно дружество
-- main: ad
-  forms:
-  - a.d
-  - akcionarsko društvo
   - а.д
   - ад
   - акционарско друштво
+  - акционерно дружество
 - main: adsic
   forms:
+  - adsitz
   - aktsionerno druzhestvo sas spetsialna investitsionna tsel
-  - адсиц
-  - акционерно дружество със специална инвестиционна цел
-- main: adsitz
-  forms:
   - адсиц
   - акционерно дружество със специална инвестиционна цел
 - main: ae
@@ -102,9 +73,6 @@ types:
   - aisbl
   - association internationale sans but lucratif
   - association sans but lucratif
-  - vereinigung ohne gewinnerzielungsabsicht
-  - vereniging zonder winstoogmerk
-  - vog
 - main: asc
   forms:
   - açıq səhmdar cəmiyyəti
@@ -123,59 +91,30 @@ types:
 - main: ca
   forms:
   - compañía anónima
-- main: cia ltda
-  forms:
-  - compañía limitada
-- main: co ltd
-  forms:
-  - co.ltd
-- main: co.
+- main: co
   forms:
   - company
+- main: co ltd
+  forms:
+  - cia ltda
+  - co., ltd.
+  - co.ltd
+  - compañía limitada
 - main: coop
   forms:
   - co-op
+  - cooperation
   - cooperative
+  - coopératif
+  - coopération
   - coopérative
-  - pool
-  - spółdzielnia
-  - united
-- main: coop
-  forms:
   - kooperatsia
   - sociedad cooperativa
+  - spółdzielni
   - кооперация
-- main: coop
-  forms:
-  - cooperation
-  - cooperative
-  - coopératif
-  - coopération
-  - coopérative
-- main: cooperation
-  forms:
-  - coop
-  - cooperative
-  - coopératif
-  - coopération
-  - coopérative
-- main: cooperative
-  forms:
-  - coop
-  - cooperation
-  - coopératif
-  - coopération
-  - coopérative
 - main: corp
   forms:
   - corporation
-- main: corp.
-  forms:
-  - inc.
-  - ltd
-  - ltée
-  - s.a.
-  - société par actions par loi sur les sociétés par actions
 - main: cp
   forms:
   - fond commun de placement
@@ -209,13 +148,6 @@ types:
 - main: cía
   forms:
   - compañía
-- main: d.o.o.
-  forms:
-  - doo
-  - društvo sa ograničenom odgovornošću
-  - д.о.о.
-  - доо
-  - друштво са ограниченом одговорношћу
 - main: dd
   forms:
   - d.d.
@@ -237,9 +169,6 @@ types:
   forms:
   - d.o.o.
   - društvo s ograničenom odgovornošću
-- main: doo
-  forms:
-  - d.o.o.
   - društvo sa ograničenom odgovornošću
   - д.о.о.
   - доо
@@ -314,7 +243,6 @@ types:
 - main: esv
   forms:
   - economisch samenwerkingsverband
-  - groupement d'intérêt économique
 - main: et
   forms:
   - ednolichen targovets
@@ -322,10 +250,8 @@ types:
   - ет
 - main: eu
   forms:
-  - empresa unipersonal
-- main: eu
-  forms:
   - eingetragenes einzelunternehmen
+  - empresa unipersonal
 - main: eurl
   forms:
   - entreprise unipersonnelle à responsabilité limitée
@@ -350,8 +276,12 @@ types:
 - main: fmba
   forms:
   - forening med begrænset ansvar
-- main: gesbr
+- main: fze
   forms:
+  - free zone establishment
+- main: gbr
+  forms:
+  - gesbr
   - gesellschaft des bürgerlichen rechts
 - main: gie
   forms:
@@ -370,6 +300,7 @@ types:
   - gesellschaft mit beschr haftung
   - gesellschaft mit beschr. haftung
   - gesellschaft mit beschränkter haftung
+  - gmbh & co.
   - gmbh & co. kg
   - gmbh und co. kg
   - mit besch haftung
@@ -435,13 +366,6 @@ types:
   - incorp
   - incorporated
   - incorporée
-- main: inc.
-  forms:
-  - corp.
-  - ltd
-  - ltée
-  - s.a.
-  - société par actions par loi sur les sociétés par actions
 - main: ins
   forms:
   - insaat
@@ -452,6 +376,7 @@ types:
   forms:
   - international
   - internationale
+  - інтернейшнл
 - main: is
   forms:
   - interessentskab
@@ -474,16 +399,15 @@ types:
   forms:
   - j.t.d.
   - javno trgovačko društvo
+- main: ju
+  forms:
+  - (ju)
+  - jusikhoesa
+  - ㈜
+  - 주식회사
 - main: jv
   forms:
   - joint venture
-- main: k.d.
-  forms:
-  - kd
-  - komanditno društvo
-  - к.д
-  - кд
-  - командитно друштво
 - main: kb
   forms:
   - kommanditbolag
@@ -492,14 +416,9 @@ types:
   - k.d.
   - komanditno druzhestvo
   - komanditno društvo
-  - кд
-  - командитно дружество
-- main: kd
-  forms:
-  - k.d.
-  - komanditno društvo
   - к.д
   - кд
+  - командитно дружество
   - командитно друштво
 - main: kda
   forms:
@@ -563,18 +482,10 @@ types:
   - ltda
   - private limited company
   - pte ltd.
-  - sociedad de responsabilidad limitada
   - sociedada limitada
   - sociedade limitada
   - בע"מ
   - 有限公司
-- main: ltd
-  forms:
-  - corp.
-  - inc.
-  - ltée
-  - s.a.
-  - société par actions par loi sur les sociétés par actions
 - main: ltd sti
   forms:
   - limited şirket
@@ -589,6 +500,9 @@ types:
 - main: mtü
   forms:
   - mittetulundusühing
+- main: na
+  forms:
+  - national association
 - main: nk
   forms:
   - nin'i kumiai
@@ -604,26 +518,17 @@ types:
 - main: nv
   forms:
   - naamloze vennootschap
-- main: o.d.
-  forms:
-  - od
-  - ortačko društvo
-  - о.д.
-  - од
-  - ортачко друштво
 - main: oaj
   forms:
   - ochiq aksiyadorlik jamiyati
   - очиқ акциядорлик жамияти
 - main: oao
   forms:
-  - oao
   - ojsc
   - open joint stock company
+  - otkrytoe akcionernoe obshchestvo
+  - оао
   - открытое акционерное общество
-- main: obrt
-  forms:
-  - obrt
 - main: od
   forms:
   - o.d.
@@ -657,6 +562,7 @@ types:
   - оод
 - main: ooo
   forms:
+  - obshchestvo s ogranichennoj otvetstvennost'yu
   - oсoo
   - ликвидационная комиссия общества с ограниченной ответственностью
   - ликвидационная комиссия общество с ограниченной ответственностью
@@ -668,6 +574,7 @@ types:
   - общество с ограниченной ответственностью фирма
   - общество с ограниченной ответственностью частная охранная организация
   - общество с ограниченной ответственностью частное охранное предприятие
+  - ооо
 - main: opg
   forms:
   - obiteljsko poljoprivredno gospodarstvo
@@ -710,8 +617,10 @@ types:
   - ሃላፊነቱ የተወሰነ የግል ማህበር
   - 股份有限公司
 - main: plt
+  forms: []
+- main: pp
   forms:
-  - plt
+  - приватне підприємство
 - main: pr
   forms:
   - preduzetnik
@@ -754,7 +663,9 @@ types:
   forms:
   - pao
   - pjsc
+  - private joint stock company
   - пао
+  - приватне акціонерне товариство
   - публичное акционерное общество
 - main: rp
   forms:
@@ -765,28 +676,19 @@ types:
 - main: ry
   forms:
   - rekisteröity yhdistys
-- main: s-ie
-  forms:
-  - sabiratelno druzhestvo (sd)/sadruzhie
-  - sd
-  - sd/s-ie
-  - с-ие
-  - сд
-  - събирателно дружество (сд)/съдружие
 - main: s. en c.
   forms:
   - comandita simple
 - main: s.cra.
   forms:
   - sociedad comanditaria
-- main: s.l.n.e.
-  forms:
-  - sociedad limitada nueva empresa
 - main: sa
   forms:
+  - s.a.
   - sarf
   - sociedad anonima
   - sociedad anónima
+  - sociedad en comandita por acciones
   - sociedad por acciones
   - sociedada anonima
   - sociedade anónima
@@ -800,6 +702,7 @@ types:
   - società anonima
   - société anonyme
   - société par actions de régime fédéral
+  - société par actions par loi sur les sociétés par actions
   - spółka akcyjna
   - شركة خفية الإسم
 - main: sad
@@ -868,9 +771,6 @@ types:
 - main: scpa
   forms:
   - sociedad civil privada
-- main: scpa
-  forms:
-  - sociedad en comandita por acciones
 - main: scs
   forms:
   - secs
@@ -884,14 +784,6 @@ types:
   - с-ие
   - сд
   - събирателно дружество
-  - събирателно дружество (сд)/съдружие
-- main: sd/s-ie
-  forms:
-  - s-ie
-  - sabiratelno druzhestvo (sd)/sadruzhie
-  - sd
-  - с-ие
-  - сд
   - събирателно дружество (сд)/съдружие
 - main: sdn bhd
   forms:
@@ -916,8 +808,9 @@ types:
 - main: sh.a
   forms:
   - shoqëri aksionere
-- main: sh.p.k
+- main: shpk
   forms:
+  - sh.p.k
   - shoqëri me përgjegjësi të kufizuar
 - main: sia
   forms:
@@ -935,6 +828,10 @@ types:
 - main: sll
   forms:
   - sociedad limitada laboral
+- main: slne
+  forms:
+  - s.l.n.e.
+  - sociedad limitada nueva empresa
 - main: sm pte ltd.
   forms:
   - single member private limited company
@@ -956,9 +853,6 @@ types:
 - main: spa
   forms:
   - società per azioni
-- main: spa
-  forms:
-  - sociedad por acciones
 - main: spe
   forms:
   - societas privata europaea
@@ -969,6 +863,11 @@ types:
   forms:
   - société privée à responsabilité limitée
   - société privée à responsabilité limitée unipersonnelle
+- main: spzoo
+  forms:
+  - sp. z o.o.
+  - sp. z o.o. sp.k
+  - spółka z ograniczoną odpowiedzialnością
 - main: srl
   forms:
   - intreprinderea cu responsabilitate limitata
@@ -1035,12 +934,13 @@ types:
 - main: tob
   forms:
   - tavaristva z abmezhavanaj adkaznastsiu
-  - tob
   - акціонерне товариство
-  - таварыства з абмежаванай адказнасцю
   - тзов
   - тов
   - товариство з обмеженою відповідальністю
+- main: too
+  forms:
+  - товарищество с ограниченной ответственностью
 - main: tü
   forms:
   - täisühing
@@ -1084,7 +984,9 @@ types:
   forms:
   - internationale vereniging zonder winstoogmerk
   - ivzw
+  - vereinigung ohne gewinnerzielungsabsicht
   - vereniging zonder winstoogmerk
+  - vog
 - main: xk
   forms:
   - xususiy korxona
@@ -1100,22 +1002,26 @@ types:
   forms:
   - yopiq aksiyadorlik jamiyati
   - ёпиқ акциядорлик жамияти
+- main: yu
+  forms:
+  - (yu)
+  - (유)
+  - yuhanhoesa
+  - 유한회사
 - main: zao
   forms:
   - cjsc
   - closed joint stock company
-  - zao
+  - zakrytoe akcionernoe obshchestvo
+  - zaо
   - закрытое акционерное общество
+  - зао
 - main: zat
   forms:
+  - zakritaye aktsiyanernaye tavaristva
   - zakrytae akcyyanernae tavarystva
   - закрытае акцыянернае таварыства
   - зат
-- main: zaо
-  forms:
-  - zakrytoe akcionernoe obshchestvo
-  - закрытое акционерное общество
-  - зао
 - main: zs
   forms:
   - z.s.
@@ -1123,17 +1029,6 @@ types:
 - main: şb
   forms:
   - şube
-- main: зат
-  forms:
-  - zakritaye aktsiyanernaye tavaristva
-- main: оао
-  forms:
-  - otkrytoe akcionernoe obshchestvo
-  - открытое акционерное общество
-- main: ооо
-  forms:
-  - obshchestvo s ogranichennoj otvetstvennost'yu
-  - общество с ограниченной ответственностью
 - main: пуп
   forms:
   - прыватнае унітарнае прадпрыемства

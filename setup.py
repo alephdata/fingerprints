@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages  # type: ignore
+from setuptools import setup, find_packages
 
 with open("README.md") as f:
     long_description = f.read()
@@ -22,12 +22,25 @@ setup(
     author_email="friedrich@pudo.org",
     url="http://github.com/alephdata/fingerprints",
     license="MIT",
-    packages=find_packages(exclude=["tests"]),
+    packages=find_packages(exclude=["tests", "tools"]),
     namespace_packages=[],
-    package_data={"": ["fingerprints/types.json"]},
+    package_data={},
     include_package_data=True,
     zip_safe=False,
     test_suite="nose.collector",
-    install_requires=["normality>=2.0.0"],
+    install_requires=[
+        "normality>=2.0.0,<=3.0.0",
+    ],
+    extras_require={
+        "dev": [
+            "pytest",
+            "pytest-cov",
+            "mypy",
+            "black",
+            "pyyaml",
+            "types-pyyaml",
+            "bump2version",
+        ],
+    },
     tests_require=["nose", "coverage", "wheel", "mypy"],
 )

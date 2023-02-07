@@ -1,8 +1,7 @@
 from unittest import TestCase
 
 import fingerprints
-
-fp = fingerprints.generate
+from fingerprints import fingerprint as fp
 
 
 class FingerprintsTest(TestCase):
@@ -46,8 +45,8 @@ class FingerprintsTest(TestCase):
 
     def test_remove(self):
         rem = fingerprints.remove_types("Siemens Aktiengesellschaft")
-        self.assertEqual(rem, "Siemens")  # noqa
+        self.assertEqual(rem, "siemens")  # noqa
         rem = fingerprints.remove_types("Siemens AG")
-        self.assertEqual(rem, "Siemens")  # noqa
+        self.assertEqual(rem, "siemens")  # noqa
         rem = fingerprints.remove_types("Foo Limited")
-        self.assertEqual(rem, "Foo")
+        self.assertEqual(rem, "foo")

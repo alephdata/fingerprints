@@ -1,3 +1,2 @@
 include README.md
-include fingerprints/types.json
 include fingerprints/py.typed
