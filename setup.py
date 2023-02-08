@@ -42,5 +42,4 @@ setup(
             "bump2version",
         ],
     },
-    tests_require=["nose", "coverage", "wheel", "mypy"],
 )

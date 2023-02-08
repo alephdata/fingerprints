@@ -51,12 +51,17 @@ types:
   forms:
   - автономная некоммерческая организация
   - ано
+- main: anpo
+  forms:
+  - autonomous non-profit organization
 - main: ao
   forms:
   - anonim ortaklık
   - joint stock company
   - jsc
+  - public stock company
   - акционерное общество
+  - акціонерного товариства
 - main: aps
   forms:
   - anpartsselskab
@@ -66,6 +71,7 @@ types:
   - akciová společnost
   - akciová spoločnosť
   - aktieselskab
+  - aktieselskabet
   - aktsiaselts
   - anonim şirket
 - main: asbl
@@ -302,10 +308,12 @@ types:
   - gesellschaft mit beschränkter haftung
   - gmbh & co.
   - gmbh & co. kg
+  - gmbh and сo. kg
   - gmbh und co. kg
   - mit besch haftung
   - mit beschr haftung
   - mit beschränkter haftung
+  - гмбх енд ко. кг
 - main: gmk
   forms:
   - 合名会社
@@ -395,6 +403,9 @@ types:
   - javno preduzeće
   - јавно предузеће
   - јп
+- main: jscb
+  forms:
+  - joint stock commercial bank
 - main: jtd
   forms:
   - j.t.d.
@@ -527,6 +538,7 @@ types:
   - ojsc
   - open joint stock company
   - otkrytoe akcionernoe obshchestvo
+  - otkrytoe aktsionernoe obshchestvo
   - оао
   - открытое акционерное общество
 - main: od
@@ -963,11 +975,37 @@ types:
   - 無限公司
 - main: up
   forms:
+  - consorzio statale
+  - den føderale statsejede budgetinstitution
+  - empresa orçamental do estado federal
+  - empresa unitaria estatal de la
+  - empresa unitária estatal
+  - entità statali
+  - entreprise unitaire d’état
+  - federal state budgetary enterprise
+  - federal state budgetary institution
+  - federal state institution
+  - federal state unitary enterprise
+  - federalna budżetowa instytucja
+  - federalnoe gosudarstvennoe byudzhetnoe uchrezhdenie
+  - föderales staatseigenes unternehmen
+  - gosudarstvennoe unitarnoe predpriyatie
+  - staatliches einheitsunternehmen
+  - staatskonzern
+  - state concern
+  - state enterprise
+  - state unitary enterprise
+  - state unitary enterprise of the
+  - státní jednotný podnik
+  - státní koncern
   - unitarnoe predpriyatie
   - unіtarnae pradpryemstva
+  - štátny unitárny podnik
+  - государственного унитарного предприятия
   - государственное унитарное предприятие
   - гп
   - гуп
+  - державного унітарного підприємства
   - унитарное предприятие
   - унітарнае прадпрыемства
   - уп
@@ -1014,6 +1052,7 @@ types:
   - closed joint stock company
   - zakrytoe akcionernoe obshchestvo
   - zaо
+  - закрите акціонерне товариство
   - закрытое акционерное общество
   - зао
 - main: zat
