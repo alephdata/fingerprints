@@ -5,12 +5,19 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python:
+          - "3.8"
+          - "3.9"
+          - "3.10"
+          - "3.11"
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.x"
+          python-version: ${{ matrix.python }}
       - name: Install dependencies
         run: |
           sudo apt-get install -y libicu-dev
@@ -35,3 +42,4 @@ jobs:
         with:
           user: __token__
           password: ${{ secrets.pypi_password }}
+          skip_existing: true
