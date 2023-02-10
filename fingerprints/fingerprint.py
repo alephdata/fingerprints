@@ -3,13 +3,13 @@ from typing import Optional
 from normality import collapse_spaces, stringify
 
 from fingerprints.constants import BRACKETED, WS
-from fingerprints.replacers import replace_types
+from fingerprints.types import replace_types
 from fingerprints.cleanup import clean_entity_name, clean_strict
 
 log = logging.getLogger(__name__)
 
 
-def generate(
+def fingerprint(
     text: Optional[str], keep_order: bool = False, keep_brackets: bool = False
 ) -> Optional[str]:
     text = stringify(text)

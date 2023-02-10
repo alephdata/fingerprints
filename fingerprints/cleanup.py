@@ -56,9 +56,11 @@ def clean_strict(text: Optional[str], boundary: str = WS) -> Optional[str]:
         return None
     # replace punctuation and symbols
     text = CHARACTERS_REMOVE_RE.sub("", text)
+    text = text.lower()
     text = category_replace(text)
     text = collapse_spaces(text)
-    if text is None:
-        return None
+    return text
+    # if text is None:
+    #     return None
     # pad out for company type replacements
-    return "".join((boundary, text, boundary))
+    # return "".join((boundary, text, boundary))
