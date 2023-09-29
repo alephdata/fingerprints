@@ -2,9 +2,10 @@ import logging
 from typing import Optional
 from normality import collapse_spaces, stringify
 
-from fingerprints.constants import BRACKETED, WS
+from fingerprints.constants import WS
 from fingerprints.types import replace_types
-from fingerprints.cleanup import clean_entity_name, clean_strict
+from fingerprints.cleanup import clean_entity_prefix, clean_name_ascii
+from fingerprints.cleanup import clean_brackets
 
 log = logging.getLogger(__name__)
 
@@ -18,16 +19,13 @@ def fingerprint(
 
     # this needs to happen before the replacements
     text = text.lower()
-    text = clean_entity_name(text)
+    text = clean_entity_prefix(text)
 
     if not keep_brackets:
-        # Remove any text in brackets
-        # This is meant to handle names of companies which include
-        # the jurisdiction, like: Turtle Management (Seychelles) Ltd.
-        text = BRACKETED.sub(WS, text)
+        text = clean_brackets(text)
 
     # Super hard-core string scrubbing
-    text = clean_strict(text)
+    text = clean_name_ascii(text)
     text = replace_types(text)
 
     if keep_order:

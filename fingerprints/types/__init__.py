@@ -1,7 +1,7 @@
 from typing import Optional
 from normality import collapse_spaces
 
-from fingerprints.cleanup import clean_strict
+from fingerprints.cleanup import clean_name_ascii
 from fingerprints.types.replacer import get_replacer, NormFunc
 
 
@@ -10,7 +10,9 @@ def replace_types(text: Optional[str]) -> Optional[str]:
     return get_replacer()(text)
 
 
-def remove_types(text: Optional[str], clean: NormFunc = clean_strict) -> Optional[str]:
+def remove_types(
+    text: Optional[str], clean: NormFunc = clean_name_ascii
+) -> Optional[str]:
     """Remove company type names from a piece of text.
 
     WARNING: This converts to ASCII by default, pass in a different
