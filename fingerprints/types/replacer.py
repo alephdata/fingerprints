@@ -5,7 +5,7 @@ from typing import Callable, Optional, Dict, Match
 
 from fingerprints.types.data import TYPES
 from fingerprints.constants import WS
-from fingerprints.cleanup import clean_strict
+from fingerprints.cleanup import clean_name_ascii
 
 log = logging.getLogger(__name__)
 NormFunc = Callable[[Optional[str]], Optional[str]]
@@ -61,7 +61,9 @@ def normalize_replacements(norm_func: NormFunc) -> Dict[str, str]:
 
 
 @lru_cache(maxsize=None)
-def get_replacer(clean: NormFunc = clean_strict, remove: bool = False) -> ReplaceFunc:
+def get_replacer(
+    clean: NormFunc = clean_name_ascii, remove: bool = False
+) -> ReplaceFunc:
     replacements = normalize_replacements(clean)
     return Replacer(replacements, remove=remove)
 

@@ -1,6 +1,7 @@
 import re
 import logging
 from typing import Optional
+from functools import lru_cache
 from normality import collapse_spaces, ascii_text, category_replace
 
 from fingerprints.constants import WS, BRACKETED
@@ -58,15 +59,22 @@ def clean_brackets(text: str) -> str:
     return BRACKETED.sub(WS, text)
 
 
+@lru_cache(maxsize=2000)
 def clean_name_ascii(text: Optional[str]) -> Optional[str]:
     """Super-hardcore string scrubbing."""
     # transliterate to ascii
     text = ascii_text(text)
     if text is None:
         return None
-    return clean_name_light(text)
+    # replace punctuation and symbols
+    text = CHARACTERS_REMOVE_RE.sub("", text)
+    text = text.lower()
+    cleaned = category_replace(text)
+    cleaned = collapse_spaces(cleaned)
+    return cleaned
 
 
+@lru_cache(maxsize=2000)
 def clean_name_light(text: str) -> Optional[str]:
     """Clean up a name for comparison, but don't convert to ASCII/Latin."""
     # replace punctuation and symbols

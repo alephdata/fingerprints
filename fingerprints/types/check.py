@@ -1,7 +1,5 @@
-import os
 import yaml
 from typing import Set
-from normality import slugify
 
 from fingerprints.types.common import TYPES_PATH, TypesList
 
