@@ -8,7 +8,7 @@ from fingerprints.constants import WS, BRACKETED
 
 log = logging.getLogger(__name__)
 
-CHARACTERS_REMOVE_RE = re.compile(r"[\.\']")
+CHARACTERS_REMOVE_RE = re.compile(r"[\.\'’]")
 
 PREFIXES_RAW_LIST = [
     "Mr",
@@ -71,6 +71,8 @@ def clean_name_ascii(text: Optional[str]) -> Optional[str]:
     text = text.lower()
     cleaned = category_replace(text)
     cleaned = collapse_spaces(cleaned)
+    if cleaned is None or len(cleaned) < 2:
+        return None
     return cleaned
 
 
@@ -82,4 +84,6 @@ def clean_name_light(text: str) -> Optional[str]:
     text = text.lower()
     cleaned = category_replace(text)
     cleaned = collapse_spaces(cleaned)
+    if cleaned is None or len(cleaned) < 2:
+        return None
     return cleaned
