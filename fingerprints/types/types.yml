@@ -56,12 +56,15 @@ types:
   - autonomous non-profit organization
 - main: ao
   forms:
+  - aktsionernoe obschestvo
   - anonim ortaklık
   - joint stock company
+  - joint-stock company
   - jsc
   - public stock company
   - акционерная компания с ограниченной ответственностью
   - акционерное общество
+  - акціонерне товариство
   - акціонерного товариства
 - main: aps
   forms:
@@ -319,6 +322,13 @@ types:
 - main: gmk
   forms:
   - 合名会社
+- main: gnpp
+  forms:
+  - gosudarstvennoe nauchno proizvodstvennoe predpriyatie
+  - scientific & production enterprise
+  - scientific and production enterprise
+  - государственное научно-производственное предприятие
+  - державне науково-виробниче підприємство
 - main: gp
   forms:
   - general partnership
@@ -552,10 +562,22 @@ types:
   - очиқ акциядорлик жамияти
 - main: oao
   forms:
+  - atviroji akcinė bendrovė
+  - avatud aktsiaselts
+  - avoin osakeyhtiö
+  - cuideachta comhstoic oscailte
+  - offene aktiengesellschaft
   - ojsc
   - open joint stock company
+  - openbare aandelenvennootschap
   - otkrytoe akcionernoe obshchestvo
   - otkrytoe aktsionernoe obshchestvo
+  - otwarta spółka akcyjna
+  - sociedad limitada por acciones abierta
+  - sociedade por ações aberta
+  - société par actions ouverte
+  - veřejná akciová společnost
+  - відкрите акціонерне товариство
   - оао
   - открытое акционерное общество
 - main: od
@@ -963,6 +985,15 @@ types:
 - main: too
   forms:
   - товарищество с ограниченной ответственностью
+- main: tpb
+  forms:
+  - corporația de rachete balistice tactice
+  - društvo za taktičke projektile
+  - tactical missile company
+  - tactical missile corporation
+  - takticheskoe raketnoe vooruzhenie
+  - тактическое ракетное вооружение
+  - тактичне ракетне озброєння
 - main: tü
   forms:
   - täisühing
