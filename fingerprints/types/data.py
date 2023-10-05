@@ -700,8 +700,11 @@ TYPES: TypesList = {
         {
             "main": "spzoo",
             "forms": [
+                "sp zoo",
                 "sp. z o.o.",
                 "sp. z o.o. sp.k",
+                "sp. z oo",
+                "sp. zoo",
                 "spółka z ograniczoną odpowiedzialnością",
             ],
         },
