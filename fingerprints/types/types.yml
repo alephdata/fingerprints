@@ -318,6 +318,7 @@ types:
   - mit besch haftung
   - mit beschr haftung
   - mit beschränkter haftung
+  - гмбх
   - гмбх енд ко. кг
 - main: gmk
   forms:
@@ -484,7 +485,6 @@ types:
   - limited liability company
   - tavaristva z abmezhavanaj adkaznastsiu
   - tob
-  - акціонерне товариство
   - тзов
   - тов
   - товариство з обмеженою відповідальністю
@@ -866,6 +866,7 @@ types:
 - main: sia
   forms:
   - sabiedrība ar ierobežotu atbildību
+  - сиа
 - main: sicaf
   forms:
   - société d'investissement à capital fixe
@@ -921,6 +922,7 @@ types:
   - sp. z o.o. sp.k
   - sp. z oo
   - sp. zoo
+  - spolka z ograniczona odpowiedzialnoscia
   - spółka z ograniczoną odpowiedzialnością
 - main: srl
   forms:
@@ -1003,6 +1005,7 @@ types:
 - main: uab
   forms:
   - uždaroji akcinė bendrovė
+  - uždarosios akcinės bendrovės
 - main: ud
   forms:
   - usaha dagang
