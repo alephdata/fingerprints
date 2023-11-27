@@ -19,6 +19,8 @@ PREFIXES_RAW_LIST = [
     "Madam",
     "Madame",
     "Monsieur",
+    "Honorable",
+    "Honourable",
     "Mme",
     "Mmme",
     "Herr",
