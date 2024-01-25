@@ -63,7 +63,18 @@ def clean_brackets(text: str) -> str:
 
 @lru_cache(maxsize=2000)
 def clean_name_ascii(text: Optional[str]) -> Optional[str]:
-    """Super-hardcore string scrubbing."""
+    """
+    This function performs a series of operations to clean and normalize the input text.
+    It transliterates the text to ASCII, removes punctuation and symbols, converts the
+    text to lowercase, replaces certain character categories, and collapses consecutive
+    spaces.
+    
+    Args:
+        text (Optional[str]): The input text to be cleaned.
+    
+    Returns:
+        Optional[str]: The cleaned text, or None if the cleaned text is empty or too short.
+    """
     # transliterate to ascii
     text = ascii_text(text)
     if text is None:
